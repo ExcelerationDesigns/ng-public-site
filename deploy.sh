@@ -23,17 +23,10 @@ echo "ng build --base-href=\"/${Array[1]}/"
 
 rev=$(git rev-parse --short HEAD)
 
-ng github-pages:deploy --gh-token=$GH_TOKEN --base-href="/${Array[1]}/" --prod --message="release: commit ${rev} pushed to production."
+ng github-pages:deploy --gh-token=$GH_TOKEN --base-href="${Array[1]}" --prod --message="release: commit ${rev} pushed to production."
 
 echo "release: commit ${rev} pushed to production."
 git log
-
-
-echo npm config get prefix
-cd npm config get prefix
-
-echo "list dir"
-ls -als
 
 
 # echo "example.com" > CNAME
