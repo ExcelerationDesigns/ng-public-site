@@ -193,7 +193,7 @@ describe('AppComponent', () => {
     });
 
     it('should handle an actual basehref', () => {
-      expect(buildTranslationPathFromHref('/ng-cli-starter/')).toBe('/ng-cli-starter' + assetPath);
+      expect(buildTranslationPathFromHref('/ng-public-site/')).toBe('/ng-public-site' + assetPath);
     });
   });
 
