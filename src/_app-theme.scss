@@ -1,0 +1,35 @@
+@import '~@angular/material/core/theming/theming';
+
+@import './styles/typography-theme';
+@import './app/layout/header/header-theme';
+@import './app/layout/footer/footer-theme';
+
+// Styles for the docs app that are based on the current theme.
+@mixin material-docs-app-theme($theme) {
+  $primary: map-get($theme, primary);
+  $accent: map-get($theme, accent);
+  $warn: map-get($theme, warn);
+  $background: map-get($theme, background);
+  $foreground: map-get($theme, foreground);
+
+  .docs-app-background {
+    background: md-color($background, background);
+  }
+
+  .docs-primary-header {
+    background: md-color($primary);
+
+    h1 {
+      color: md-color($primary, default-contrast);
+    }
+  }
+
+  .docs-footer {
+    background: md-color($primary);
+    color: md-color($primary, default-contrast);
+  }
+
+  @include typography-theme($theme);
+  @include header-theme($theme);
+  @include footer-theme($theme);
+}
