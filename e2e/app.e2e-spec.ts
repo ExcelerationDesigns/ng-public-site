@@ -23,24 +23,24 @@ describe('ng-public-site App', () => {
 
     it('should have a link to default page', () => {
       const linkList = page.getNavLinkList();
-      expect(linkList.get(0).getText()).toEqual('EXCELERATION DESIGNS');
+      expect(linkList.get(0).getText()).toEqual('Exceleration Designs');
     });
 
     it('should have a link to home page', () => {
       const linkList = page.getNavLinkList();
-      expect(linkList.get(1).getText()).toEqual('HOME');
+      expect(linkList.get(1).getText()).toEqual('Home');
     });
 
     it('should have a link to about page', () => {
       const linkList = page.getNavLinkList();
-      expect(linkList.get(2).getText()).toEqual('ABOUT');
+      expect(linkList.get(2).getText()).toEqual('About');
     });
   });
 
   describe('navigation switches pages', () => {
     it('should have a link to home page', () => {
       page.getNavLinkList().get(0).click().then(() => {
-        expect(page.getHomePageComponent().getText()).toEqual('Home');
+        expect(page.getHomePageComponent().getText()).toContain('Welcome to Options');
       });
     });
 
