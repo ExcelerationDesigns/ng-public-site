@@ -103,12 +103,11 @@ export class ParallaxDirective implements OnInit {
     this.hostElement = element.nativeElement;
   }
 
-
   public ngOnInit() {
     let cssValArray: string[];
 
     for (const prop in this.config) {
-      if(this.config.hasOwnProperty(prop)) {
+      if (this.config.hasOwnProperty(prop)) {
         this[prop] = this.config[prop];
       }
     }
@@ -157,8 +156,6 @@ export class ParallaxDirective implements OnInit {
 
     this.scrollElement.addEventListener('scroll', this.evaluateScroll.bind(this));
   }
-
-
 
   private evaluateScroll = () => {
     if (this.canMove) {
