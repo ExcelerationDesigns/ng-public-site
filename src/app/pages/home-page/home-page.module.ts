@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 
 import { TranslateModule } from 'ng2-translate/ng2-translate';
 
+import { SharedModule } from '../../shared/shared.module';
+
 import { HomePageRoutingModule } from './home-page.routing';
 import { HomePageComponent } from './home-page.component';
 
@@ -13,7 +15,8 @@ import { HomePageComponent } from './home-page.component';
   imports: [
     CommonModule,
     HomePageRoutingModule,
-    TranslateModule
+    TranslateModule,
+    SharedModule
   ]
 })
 export class HomePageModule { }
