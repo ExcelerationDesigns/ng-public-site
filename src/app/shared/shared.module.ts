@@ -15,7 +15,8 @@ import { ParallaxDirective } from './directives/parallax/parallax.directive';
   ],
   exports: [
     CommonModule,
-    FormsModule
+    FormsModule,
+    ParallaxDirective
   ],
   imports: [
     CommonModule,

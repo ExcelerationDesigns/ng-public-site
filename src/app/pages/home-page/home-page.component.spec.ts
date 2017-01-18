@@ -4,6 +4,7 @@ import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
 import { TranslateService, TranslateModule, TranslateLoader, TranslateParser } from 'ng2-translate/ng2-translate';
+import { SharedModule } from './../../shared/shared.module';
 
 import { HomePageComponent } from './home-page.component';
 
@@ -15,7 +16,8 @@ describe('HomePageComponent', () => {
     TestBed.configureTestingModule({
       declarations: [ HomePageComponent ],
       imports: [
-        TranslateModule
+        TranslateModule,
+        SharedModule
       ],
       providers: [
         TranslateLoader,

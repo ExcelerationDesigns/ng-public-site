@@ -1,15 +1,15 @@
-@mixin header-theme($theme) {
-  $primary: map-get($theme, primary);
-  $accent: map-get($theme, accent);
-  $warn: map-get($theme, warn);
-  $background: map-get($theme, background);
-  $foreground: map-get($theme, foreground);
-
-  app-header {
-    color: md-color($primary, default-contrast);
-
-    .navbar {
-      background: md-color($primary);
+@mixin header-theme($white-color, $black-color, $primary-color) {
+  .navbar {
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.15);
+    background: $white-color;
+    .navbar-nav{
+        > li > a{
+            color: $black-color;
+        }
+    }
+    .nav > li > a:hover, .nav > li > a:focus{
+        background: $primary-color;
+        color: $white-color;
     }
   }
 }
