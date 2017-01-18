@@ -14,6 +14,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { TranslateModule, TranslateService, TranslateLoader, TranslateStaticLoader } from 'ng2-translate/ng2-translate';
 import { AngularFireModule } from 'angularfire2';
 import { Angulartics2, Angulartics2Module, Angulartics2GoogleAnalytics } from 'angulartics2';
+import { Subscription } from 'rxjs/Subscription';
+import { MatchMediaObservableProvider, MediaChange } from '@angular/flex-layout';
 
 import { buildTranslationPathFromHref, createTranslateLoader } from './app.module';
 
@@ -22,6 +24,7 @@ import { NotFoundComponent } from './layout/not-found/not-found.component';
 import { HeaderComponent } from './layout/header/header.component';
 import { FooterComponent } from './layout/footer/footer.component';
 import { SidebarComponent } from './layout/sidebar/sidebar.component';
+import { BottomNavComponent } from './layout/bottom-nav/bottom-nav.component';
 
 import { RouterLinkStubDirective, RouterOutletStubComponent, RouterStub, ActivatedRouteStub } from './testing/router-stubs.spec';
 
@@ -48,6 +51,7 @@ describe('AppComponent', () => {
         HeaderComponent,
         FooterComponent,
         SidebarComponent,
+        BottomNavComponent,
         RouterLinkStubDirective,
         RouterOutletStubComponent
       ],
@@ -71,7 +75,8 @@ describe('AppComponent', () => {
         },
         { provide: Router, useClass: RouterStub },
         { provide: Location, useClass: SpyLocation },
-        { provide: ActivatedRoute, useClass: ActivatedRouteStub }
+        { provide: ActivatedRoute, useClass: ActivatedRouteStub },
+        MatchMediaObservableProvider
       ],
       schemas: [
         NO_ERRORS_SCHEMA

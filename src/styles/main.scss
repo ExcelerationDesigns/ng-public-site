@@ -1435,46 +1435,6 @@ section.content-section {
 }
 
 
-
-/*--------------------------------------------------------------
-# 16. FOOTER
---------------------------------------------------------------*/
-.footer {
-    background: #222222; /* fallback for old browsers */
-    background: -webkit-linear-gradient(to left, #222222 , #434343); /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to left, #222222 , #434343); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    color: $light-gray-color;
-    h5, h6 {
-        color: $light-gray-color;
-        text-transform: uppercase;
-    }
-    p {
-        margin-bottom: 0;
-        i {
-            display: inline-block;
-            width: 25px;
-        }
-    }
-    .top-container {
-        padding-top: 80px;
-        padding-bottom: 80px;
-    }
-    .footer-bottom {
-        padding: 20px 0;
-        background: #222;
-        font-size: 90%;
-        color: $light-gray-color;
-        a {
-            padding: 0 15px;
-        }
-    }
-    .social-link {
-        padding: 10px;
-        font-size: 1.618em;
-    }
-}
-
-
 /*--------------------------------------------------------------
 # 17. PAGE HEADER
 --------------------------------------------------------------*/

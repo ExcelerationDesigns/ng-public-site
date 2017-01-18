@@ -38,6 +38,7 @@ $nav-rounded: $border-radius-base;
 // Import bourbon & typographic
 @import "bourbon/bourbon";
 @import "typographic/typographic";
+@import "bootstrap-sass/bootstrap/_variables";
 
 // Typographic settings
 $body-font: $st-body-font;

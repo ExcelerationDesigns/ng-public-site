@@ -1,0 +1,9 @@
+@import './../styles/variables';
+
+.mobile-padding {
+  margin-bottom: $navbar-height;  // this is for the box shadow we add
+}
+
+.no-mobile-padding {
+  margin-top: $navbar-height + 2px;
+}

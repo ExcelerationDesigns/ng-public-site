@@ -1,24 +1,36 @@
+@import './../../../styles/variables';
 
-
-.mobile-container {
-  height: 45px;
-  border: solid 1px #b6b6b6;
-  opacity: 0.9;
-  color: #fff;
-  text-align: center;
-
-  .test1 {
-    color: white;
-    background-color: #009688;
-  }
-
-  .test2 {
-    color: white;
-    background-color: #3949ab;
-  }
-
-  .test3 {
-    color: white;
-    background-color: #9c27b0;
-  }
+.footer {
+    background: #222222; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #222222 , #434343); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #222222 , #434343); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: $light-gray-color;
+    h5, h6 {
+        color: $light-gray-color;
+        text-transform: uppercase;
+    }
+    p {
+        margin-bottom: 0;
+        i {
+            display: inline-block;
+            width: 25px;
+        }
+    }
+    .top-container {
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+    .footer-bottom {
+        padding: 20px 0;
+        background: #222;
+        font-size: 90%;
+        color: $light-gray-color;
+        a {
+            padding: 0 15px;
+        }
+    }
+    .social-link {
+        padding: 10px;
+        font-size: 1.618em;
+    }
 }

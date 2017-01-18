@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, Inject, OnInit, OnDestroy } from '@angular/core';
 import { Title } from '@angular/platform-browser';
-
+import { MatchMediaObservable, MediaChange } from '@angular/flex-layout';
 import { Angulartics2GoogleAnalytics } from 'angulartics2';
+import { Subscription } from 'rxjs/Subscription';
 
 import { TranslateService } from 'ng2-translate/ng2-translate';
 
@@ -10,11 +11,14 @@ import { TranslateService } from 'ng2-translate/ng2-translate';
   styleUrls: ['./app.component.scss'],
   templateUrl: './app.component.html'
 })
-export class AppComponent {
+export class AppComponent implements OnInit, OnDestroy {
+  isMobile: boolean = false;
+  private watcher: Subscription;
 
   constructor(private titleService: Title,
               private translate: TranslateService,
-              private angulartics2GoogleAnalytics: Angulartics2GoogleAnalytics) {
+              private angulartics2GoogleAnalytics: Angulartics2GoogleAnalytics,
+              @Inject(MatchMediaObservable) private media$) {
     // this language will be used as a fallback when a translation isn't found in the current language
     translate.setDefaultLang('en_US');
 
@@ -23,6 +27,22 @@ export class AppComponent {
     translate.get('appTitle').subscribe(
       (res: string) => this.titleService.setTitle(res)
     );
+  }
+
+  ngOnInit() {
+    this.watchMediaQueryChanges();
+  }
+
+  ngOnDestroy() {
+    if (this.watcher) {
+      this.watcher.unsubscribe();
+    }
+  }
+
+  watchMediaQueryChanges() {
+    this.watcher = this.media$.subscribe((change: MediaChange) => {
+      this.isMobile = (change.mqAlias === 'xs') || (change.mqAlias === 'sm');
+    });
   }
 
   toggleLang(langToUse: string) {

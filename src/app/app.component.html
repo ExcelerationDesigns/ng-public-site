@@ -1,3 +1,7 @@
 <app-header (onLangClicked)="toggleLang($event)"></app-header>
-<router-outlet></router-outlet>
-<app-footer></app-footer>
+<div [class.mobile-padding]="isMobile" [class.no-mobile-padding]="!isMobile">
+  <router-outlet></router-outlet>
+  <app-footer></app-footer>
+</div>
+<app-bottom-nav></app-bottom-nav>
+
