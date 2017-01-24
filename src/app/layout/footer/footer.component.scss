@@ -16,6 +16,9 @@
             width: 25px;
         }
     }
+    a {
+        cursor: pointer;
+    }
     .top-container {
         padding-top: 80px;
         padding-bottom: 80px;
@@ -32,5 +35,9 @@
     .social-link {
         padding: 10px;
         font-size: 1.618em;
+    }
+
+    .privacy {
+        text-align: right;
     }
 }

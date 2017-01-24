@@ -35,9 +35,13 @@
   <div class="footer-bottom">
     <div class="container">
       <div class="row">
-        <p class="col-sm-6">&copy; Salt Technologies  | 2016</p>
-        <div class="col-sm-6 text-right">
-          <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+        <div fxFlex fxLayout="row" fxLayoutAlign="space-around center" fxLayout.xs="column" fxLayout.sm="column">
+          <div fxFlex>
+            <p>{{'footer.copyright' | translate}}  | {{getCurrentYear()}}</p>
+          </div>
+          <div fxFlex class="privacy">
+            <a>{{'footer.privacyPolicy' | translate}}</a> | <a>{{'footer.termsOfService' | translate}}</a>
+          </div>
         </div>
       </div>
       <!-- /.row -->

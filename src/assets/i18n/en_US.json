@@ -5,8 +5,10 @@
         "unitedStates": "United States",
         "unitedKingdom": "United Kingdom"
     },
-    "common": {
-
+    "footer": {
+        "privacyPolicy": "Privacy Policy",
+        "termsOfService": "Terms of Service",
+        "copyright": "© Exceleration Designs, Inc"
     },
     "homePage": {
         "title": "Home"
