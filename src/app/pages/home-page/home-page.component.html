@@ -1,23 +1,40 @@
 <div class="main-wrapper">
   <div class="main">
+    <!-- ========== HEADER ========== -->
+    <section class="parallax-section" appParallax>
+      <section class="content-section black-grad">
+        <div class="container">
+          <div class="row text-center">
+            <header class="section-title page-title mbn">
+              <h6 class="small-title">{{ 'homePage.whatWeDo' | translate }}</h6>
+              <h1 class="main-title">{{ 'homePage.weBuildTech' | translate }}</h1>
+              <p>{{ 'homePage.weBuildTechDescription' | translate }}</p>
+              <a [routerLink]="contact" class="btn st-btn btn-rounded ">{{ 'contactPage.title' | translate }}</a>
+            </header>
+          </div>
+          <!-- /.row -->
+        </div>
+        <!-- /.container -->
+      </section>
+      <!-- /.primary-grad -->
+    </section>
+    <!-- /.parallax-section -->
     <!-- ========== INTRO SECTION ========== -->
     <section class="content-section">
       <div class="container">
         <div class="row">
 
           <header class="section-title text-center">
-            <h6 class="small-title">Welcome to Options!</h6>
-            <h1 class="main-title">Website Designers.</h1>
-            <p class="sub-title">We are young team of highly experienced developers!</p>
+            <h6 class="small-title">{{ 'homePage.welcome' | translate }}</h6>
+            <p class="sub-title">{{ 'homePage.welcomeDescription' | translate }}</p>
           </header>
           <!-- /.section-title -->
 
           <div class="col-md-4">
             <div class="feature-box text-center">
               <i class="icon ion-ios-chatboxes"></i>
-              <h4>Fully Responsive</h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                magna aliqua.</p>
+              <h4>{{ 'homePage.websiteDesign' | translate }}</h4>
+              <p>{{ 'homePage.websiteDesignDescription' | translate }}</p>
               <i class="bg-icon ion-ios-chatboxes"></i>
             </div>
             <!-- /.feature-box -->
@@ -27,9 +44,8 @@
           <div class="col-md-4">
             <div class="feature-box text-center">
               <i class="icon ion-ios-cube"></i>
-              <h4>Modern Design</h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                magna aliqua.</p>
+              <h4>{{ 'homePage.customSoftware' | translate }}</h4>
+              <p>{{ 'homePage.customSoftwareDescription' | translate }}</p>
               <i class="bg-icon ion-ios-cube"></i>
             </div>
             <!-- /.feature-box -->
@@ -39,9 +55,8 @@
           <div class="col-md-4">
             <div class="feature-box text-center">
               <i class="icon ion-ios-pie"></i>
-              <h4>SEO Friendly</h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                magna aliqua.</p>
+              <h4>{{ 'homePage.consulting' | translate }}</h4>
+              <p>{{ 'homePage.consultingDescription' | translate }}</p>
               <i class="bg-icon ion-ios-pie"></i>
             </div>
             <!-- /.feature-box -->
