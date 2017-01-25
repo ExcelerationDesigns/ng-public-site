@@ -1,0 +1,3 @@
+Dark Grey - #303030
+Light Grey - #595A5A
+Red - ED1C24
