@@ -10,10 +10,14 @@ import { Router, RouterModule, ActivatedRoute } from '@angular/router';
 import { PlatformLocation, LocationStrategy } from '@angular/common';
 import { RouterLinkStubDirective, RouterOutletStubComponent, RouterStub, ActivatedRouteStub } from './../../testing/router-stubs.spec';
 
-import { MaterialModule } from '@angular/material';
+import { MaterialModule, MdMenuModule,
+                        MdMenuTrigger } from '@angular/material';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { createTranslateLoader } from './../../app.module';
+import { CoreModule } from './../../core/core.module';
+import { LangService } from './../../core/utility/lang.service';
+
 import { TranslateModule, TranslateService, TranslateLoader, TranslateParser } from 'ng2-translate/ng2-translate';
 
 import { HeaderComponent } from './header.component';
@@ -26,24 +30,39 @@ describe('NotFoundComponent', () => {
     TestBed.configureTestingModule({
       declarations: [
         HeaderComponent,
-        RouterLinkStubDirective
+        RouterLinkStubDirective,
+        RouterOutletStubComponent
       ],
       imports: [
-        TranslateModule,
+        HttpModule,
+        TranslateModule.forRoot({
+          deps: [Http, PlatformLocation],
+          provide: TranslateLoader,
+          useFactory: (createTranslateLoader)
+        }),
+        CoreModule,
         MaterialModule.forRoot(),
-        FlexLayoutModule.forRoot()
+        FlexLayoutModule.forRoot(),
+        MdMenuModule.forRoot()
       ],
       providers: [
         TranslateService,
         TranslateLoader,
         TranslateParser,
-        { provide: ActivatedRoute, useClass: ActivatedRouteStub }
+        { provide: Router, useClass: RouterStub },
+        { provide: Location, useClass: SpyLocation },
+        { provide: ActivatedRoute, useClass: ActivatedRouteStub },
+        LangService
       ],
       schemas: [
         NO_ERRORS_SCHEMA
       ]
     })
-    .compileComponents();
+    .compileComponents()
+    .then(() => {
+      fixture = TestBed.createComponent(HeaderComponent);
+      component = fixture.componentInstance;
+    });
   }));
 
   beforeEach(() => {

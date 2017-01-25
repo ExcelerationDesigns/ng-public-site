@@ -18,6 +18,8 @@ import { Subscription } from 'rxjs/Subscription';
 import { MatchMediaObservableProvider, MediaChange } from '@angular/flex-layout';
 
 import { buildTranslationPathFromHref, createTranslateLoader } from './app.module';
+import { CoreModule } from './core/core.module';
+import { LangService } from './core/utility/lang.service';
 
 import { AppComponent } from './app.component';
 import { NotFoundComponent } from './layout/not-found/not-found.component';
@@ -62,6 +64,7 @@ describe('AppComponent', () => {
           provide: TranslateLoader,
           useFactory: (createTranslateLoader)
         }),
+        CoreModule,
         AngularFireModule,
         MaterialModule.forRoot(),
         FlexLayoutModule.forRoot(),
@@ -76,7 +79,8 @@ describe('AppComponent', () => {
         { provide: Router, useClass: RouterStub },
         { provide: Location, useClass: SpyLocation },
         { provide: ActivatedRoute, useClass: ActivatedRouteStub },
-        MatchMediaObservableProvider
+        MatchMediaObservableProvider,
+        LangService
       ],
       schemas: [
         NO_ERRORS_SCHEMA
@@ -117,12 +121,13 @@ describe('AppComponent', () => {
     translate = undefined;
     connection = undefined;
     title = undefined;
+    appComponent = undefined;
   });
 
-  it('should create the app', async(() => {
+  it('should create the app', () => {
     const app = fixture.debugElement.componentInstance;
     expect(app).toBeTruthy();
-  }));
+  });
 
   it('should be able to get translations', () => {
     translate.use('en');
@@ -167,15 +172,15 @@ describe('AppComponent', () => {
   });
 
   it('should get / from RouterLinks from template', () => {
-    expect(links[0].linkParams).toBe('/', '1st link should go to /');
+    expect(links[0].linkParams).toBe('/home', '1st link should go to Home');
   });
 
   it('should get Home from RouterLinks from template', () => {
-    expect(links[1].linkParams).toBe('/home', '1st link should go to Home');
+    expect(links[1].linkParams).toBe('/about', '1st link should go to About');
   });
 
   it('should get About from RouterLinks from template', () => {
-    expect(links[2].linkParams).toBe('/about', '1st link should go to About');
+    expect(links[2].linkParams).toBe('/', '1st link should go to /');
   });
 
   it('should get Home from RouterLinks from template', () => {

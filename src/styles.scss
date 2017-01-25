@@ -2,5 +2,12 @@ $bootstrap-sass-asset-helper: false;
 
 $icon-font-path: if($bootstrap-sass-asset-helper, "bootstrap/", "../node_modules/bootstrap-sass/assets/fonts/bootstrap/");
 @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+@import '~@angular/material/core/theming/all-theme';
+
+// Include material core styles.
+@include md-core();
 
 @import './styles/main';
+@import './styles/material-theme';
+
+@include material-modifications();

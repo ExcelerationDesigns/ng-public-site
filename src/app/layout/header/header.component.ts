@@ -1,4 +1,5 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { LangService } from './../../core/utility/lang.service';
 
 @Component({
   selector: 'app-header',
@@ -7,9 +8,9 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 })
 
 export class HeaderComponent implements OnInit {
-
   @Output() onLangClicked = new EventEmitter<string>();
 
+  flagUrl: string = ""; // this.lang.getCurrentImageStr();
   constructor() { }
 
   ngOnInit() {

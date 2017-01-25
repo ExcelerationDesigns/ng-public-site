@@ -1,18 +1,27 @@
 @import './../../../styles/variables';
 
+nav {
+    z-index: 500;
+}
+
 .navbar {
   padding: $nav-bar-padding 2 * $nav-bar-padding;
   box-shadow: 0 2px 3px rgba(0, 0, 0, 0.15);
   background: $white-color;
 
+  .lang-buttons {
+      text-align: center;
+  }
+
   .brand {
-      float: left;
+      float: right;
       img {
-          height: $navbar-height - (2 * $nav-bar-padding);  // this is for the box shadow we add
+          height: $navbar-height;  // this is for the box shadow we add
+          width: 250px;
       }
   }
 
-  .navbar-nav{
+  .navbar-nav {
       > li > a{
           color: $black-color;
       }
