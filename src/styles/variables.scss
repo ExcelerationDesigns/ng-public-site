@@ -4,7 +4,7 @@
 --------------------------------------------------------------*/
 
 // Google Font
-@import url('https://fonts.googleapis.com/css?family=Poppins:600|Questrial');
+@import url('https://fonts.googleapis.com/css?family=Poppins:600|Questrial|Material+Icons');
 
 // Variables
 $st-body-font: 'Questrial', sans-serif;
@@ -24,6 +24,9 @@ $brand-primary: $primary-color;
 $border-radius-base: 6px;
 $border-radius-large: 0px;
 $border-radius-small: 0px;
+
+// Navbar Variables
+$nav-bar-padding: 8px;
 
 // Hover variables
 $activeColor: $primary-color;

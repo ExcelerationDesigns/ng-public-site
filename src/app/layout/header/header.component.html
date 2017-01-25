@@ -2,8 +2,8 @@
   <!-- TODO: figure out if the <nav> should go inside of a <header> element. -->
   <nav class="navbar navbar-fixed-top" fxShow="false" fxShow.gt-sm fxLayout="row">
     <div fxFlex="80">
-      <a md-button routerLink="/">
-        <span>{{'appTitle' | translate}}</span>
+      <a class="brand" routerLink="/">
+        <img src="./assets/logos/EDI-Black-Logo-800px.png" alt="{{'appTitle' | translate}}">
       </a>
       <a md-button routerLink="/home" routerLinkActive="active">{{'homePage.title' | translate}}</a>
       <a md-button routerLink="/about" routerLinkActive="active">{{'aboutPage.title' | translate}}</a>

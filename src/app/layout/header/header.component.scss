@@ -1,9 +1,17 @@
 @import './../../../styles/variables';
 
 .navbar {
-  padding: 8px 16px;
+  padding: $nav-bar-padding 2 * $nav-bar-padding;
   box-shadow: 0 2px 3px rgba(0, 0, 0, 0.15);
   background: $white-color;
+
+  .brand {
+      float: left;
+      img {
+          height: $navbar-height - (2 * $nav-bar-padding);  // this is for the box shadow we add
+      }
+  }
+
   .navbar-nav{
       > li > a{
           color: $black-color;

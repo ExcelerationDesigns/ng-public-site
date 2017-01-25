@@ -18,6 +18,10 @@ const appRoutes: Routes = [
     path: 'home',
   },
   {
+    loadChildren: 'app/pages/contact-page/contact-page.module#ContactPageModule',
+    path: 'contact',
+  },
+  {
     component: NotFoundComponent,
     path: '**',
   },
@@ -28,8 +32,7 @@ const appRoutes: Routes = [
     RouterModule
   ],
   imports: [
-    RouterModule.forRoot(appRoutes,
-                        { preloadingStrategy: PreloadAllModules })
+    RouterModule.forRoot(appRoutes, { preloadingStrategy: PreloadAllModules })
   ]
 })
 export class AppRoutingModule { }
