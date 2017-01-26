@@ -10,8 +10,8 @@ import { LangService } from './../../core/utility/lang.service';
 export class HeaderComponent implements OnInit {
   @Output() onLangClicked = new EventEmitter<string>();
 
-  flagUrl: string = ""; // this.lang.getCurrentImageStr();
-  constructor() { }
+  flagUrl: string = this.lang.getCurrentImageStr();
+  constructor(public lang: LangService) { }
 
   ngOnInit() {
   }

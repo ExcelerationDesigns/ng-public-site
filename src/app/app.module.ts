@@ -27,6 +27,7 @@ import { BottomNavComponent } from './layout/bottom-nav/bottom-nav.component';
 
 import { CoreModule } from './core/core.module';
 import { SharedModule } from './shared/shared.module';
+import { LangService } from './core/utility/lang.service';
 
 export function buildTranslationPathFromHref(baseHref: string) {
   let i18nFolderPath = '/assets/i18n';
@@ -72,7 +73,8 @@ export function createTranslateLoader(http: Http, pl: PlatformLocation) {
 
   ],
   providers: [
-    Title
+    Title,
+    LangService
   ]
 
 })
