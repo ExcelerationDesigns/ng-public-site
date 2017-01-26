@@ -17,18 +17,18 @@ describe('ng-public-site App', () => {
   });
 
   describe('navigation is built properly', () => {
-    it('should have two links', () => {
-      expect(page.getNavLinkList().count()).toEqual(5);
+    it('should have three links', () => {
+      expect(page.getNavLinkList().count()).toEqual(3);
     });
 
     it('should have a link to home page', () => {
       const linkList = page.getNavLinkList();
-      expect(linkList.get(1).getText()).toEqual('Home');
+      expect(linkList.get(0).getText()).toEqual('Home');
     });
 
     it('should have a link to about page', () => {
       const linkList = page.getNavLinkList();
-      expect(linkList.get(2).getText()).toEqual('About');
+      expect(linkList.get(1).getText()).toEqual('About');
     });
   });
 
@@ -40,15 +40,10 @@ describe('ng-public-site App', () => {
     });
 
     it('should have a link to about page', () => {
-      page.getNavLinkList().get(2).click().then(() => {
+      page.getNavLinkList().get(1).click().then(() => {
         expect(page.getAboutPageComponent().getText()).toEqual('About');
       });
     });
   });
 
-  describe('language control is built properly', () => {
-    it('should have two links', () => {
-      expect(page.getLangListArray().count()).toEqual(2);
-    });
-  });
 });
