@@ -1,5 +1,7 @@
+import { PlatformLocation } from '@angular/common';
 import { Injectable } from '@angular/core';
 import { TranslateService } from 'ng2-translate/ng2-translate';
+import { buildPathFromHref } from '../../app.module';
 
 @Injectable()
 export class LangService {
@@ -264,7 +266,8 @@ export class LangService {
     'ZM',
     'ZW'];
 
-  constructor(private translate: TranslateService) { }
+  constructor(private translate: TranslateService,
+              private pl: PlatformLocation) { }
 
   getCurrentLang(): string {
     return this.translate.currentLang;
@@ -288,7 +291,7 @@ export class LangService {
     if ( imgNdx >= 0 ) {
       retVal = this.imgArray[imgNdx];
     }
-    return `/assets/flags-iso/flat/32/${retVal}.png`;
+    return buildPathFromHref(`/assets/flags-iso/flat/32/${retVal}.png`, this.pl.getBaseHrefFromDOM());
   }
 
   getCurrentImageStr(): string {

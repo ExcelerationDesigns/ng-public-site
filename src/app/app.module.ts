@@ -30,14 +30,18 @@ import { SharedModule } from './shared/shared.module';
 import { LangService } from './core/utility/lang.service';
 
 export function buildTranslationPathFromHref(baseHref: string) {
-  let i18nFolderPath = '/assets/i18n';
+  return buildPathFromHref('/assets/i18n', baseHref);
+}
+
+export function buildPathFromHref(baseHref: string, path: string) {
+  let folderPath = path;
   if (baseHref && baseHref.length > 0 && baseHref !== '/' ) {
     if (baseHref.endsWith('/')) {
       baseHref = baseHref.slice(0, baseHref.length - 1);
     }
-    i18nFolderPath = `${baseHref}${i18nFolderPath}`;
+    folderPath = `${baseHref}${folderPath}`;
   }
-  return i18nFolderPath;
+  return folderPath;
 }
 
 export function createTranslateLoader(http: Http, pl: PlatformLocation) {
