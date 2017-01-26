@@ -35,7 +35,7 @@ describe('ng-public-site App', () => {
   describe('navigation switches pages', () => {
     it('should have a link to home page', () => {
       page.getNavLinkList().get(0).click().then(() => {
-        expect(page.getHomePageComponent().getText()).toContain('Welcome to Exceleration Designs');
+        expect(page.getHomePageComponent().getText()).toContain('Welcome to');
       });
     });
 

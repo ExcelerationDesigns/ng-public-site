@@ -2,7 +2,7 @@
   <!-- TODO: figure out if the <nav> should go inside of a <header> element. -->
   <nav class="navbar navbar-fixed-top" fxShow="false" fxShow.gt-sm fxLayout="row" fxLayoutAlign="space-between center">
     <div class="lang-buttons" fxFlex="100px">
-      <img [mdMenuTriggerFor]="menu" class="edi-lang" src="{{flagUrl}}" alt="Angular">
+      <img [mdMenuTriggerFor]="menu" class="edi-lang" src="{{lang.getCurrentImageStr()}}" alt="Angular">
       <md-menu y-position="below" x-position="after" overlapTripper="true" #menu="mdMenu">
         <button md-menu-item (click)="langClicked('en_GB')">
           <img class="edi-lang" src="./assets/flags-iso/flat/32/GB.png" alt="Angular">

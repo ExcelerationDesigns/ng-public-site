@@ -9,3 +9,15 @@
 .possibilities-section {
   background-image: url('./assets/images/demo-img-3.jpg');
 }
+
+.main-wrapper {
+  .main {
+    .welcome-logo {
+      .logo {
+        img {
+          width: 400px;
+        }
+      }
+    }
+  }
+}
