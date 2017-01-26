@@ -291,7 +291,7 @@ export class LangService {
     if ( imgNdx >= 0 ) {
       retVal = this.imgArray[imgNdx];
     }
-    return buildPathFromHref(`/assets/flags-iso/flat/32/${retVal}.png`, this.pl.getBaseHrefFromDOM());
+    return buildPathFromHref(this.pl.getBaseHrefFromDOM(), `/assets/flags-iso/flat/32/${retVal}.png`);
   }
 
   getCurrentImageStr(): string {

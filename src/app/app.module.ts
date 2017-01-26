@@ -30,7 +30,7 @@ import { SharedModule } from './shared/shared.module';
 import { LangService } from './core/utility/lang.service';
 
 export function buildTranslationPathFromHref(baseHref: string) {
-  return buildPathFromHref('/assets/i18n', baseHref);
+  return buildPathFromHref(baseHref, '/assets/i18n');
 }
 
 export function buildPathFromHref(baseHref: string, path: string) {
