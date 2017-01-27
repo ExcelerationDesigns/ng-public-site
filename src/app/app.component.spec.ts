@@ -168,27 +168,31 @@ describe('AppComponent', () => {
   }));
 
   it('should get RouterLinks from template', () => {
-    expect(links.length).toBe(5, 'should have 2 links');
+    expect(links.length).toBe(6, 'should have 6 links');
   });
 
   it('should get / from RouterLinks from template', () => {
-    expect(links[0].linkParams).toBe('/home', '1st link should go to Home');
+    expect(links[0].linkParams).toBe('/home', 'link should go to Home');
   });
 
-  it('should get Home from RouterLinks from template', () => {
-    expect(links[1].linkParams).toBe('/about', '1st link should go to About');
+  it('should get Services from RouterLinks from template', () => {
+    expect(links[1].linkParams).toBe('/about', 'link should go to Services');
   });
 
   it('should get About from RouterLinks from template', () => {
-    expect(links[2].linkParams).toBe('/', '1st link should go to /');
+    expect(links[2].linkParams).toBe('/', 'link should go to /');
   });
 
-  it('should get Home from RouterLinks from template', () => {
-    expect(links[3].linkParams).toBe('/home', '1st link should go to Home');
+  it('should get Admin from RouterLinks from template', () => {
+    expect(links[3].linkParams).toBe('/admin', 'link should go to Home');
+  });
+
+  it('should get Services from RouterLinks from template', () => {
+    expect(links[4].linkParams).toBe('/home', 'link should go to Home');
   });
 
   it('should get About from RouterLinks', () => {
-    expect(links[4].linkParams).toBe('/about', '2nd link should go to About');
+    expect(links[5].linkParams).toBe('/about', '2nd link should go to About');
   });
 
   describe('handling baseref paths for asset directory', () => {

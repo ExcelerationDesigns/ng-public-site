@@ -17,8 +17,8 @@ describe('ng-public-site App', () => {
   });
 
   describe('navigation is built properly', () => {
-    it('should have three links', () => {
-      expect(page.getNavLinkList().count()).toEqual(3);
+    it('should have four links', () => {
+      expect(page.getNavLinkList().count()).toEqual(4);
     });
 
     it('should have a link to home page', () => {
@@ -26,9 +26,19 @@ describe('ng-public-site App', () => {
       expect(linkList.get(0).getText()).toEqual('Home');
     });
 
+    it('should have a link to services page', () => {
+      const linkList = page.getNavLinkList();
+      expect(linkList.get(1).getText()).toEqual('Services');
+    });
+
     it('should have a link to about page', () => {
       const linkList = page.getNavLinkList();
-      expect(linkList.get(1).getText()).toEqual('About');
+      expect(linkList.get(2).getText()).toEqual('About');
+    });
+
+    it('should have a link to admin page', () => {
+      const linkList = page.getNavLinkList();
+      expect(linkList.get(3).getText()).toEqual('');
     });
   });
 
@@ -40,7 +50,7 @@ describe('ng-public-site App', () => {
     });
 
     it('should have a link to about page', () => {
-      page.getNavLinkList().get(1).click().then(() => {
+      page.getNavLinkList().get(2).click().then(() => {
         expect(page.getAboutPageComponent().getText()).toEqual('About');
       });
     });
