@@ -88,11 +88,9 @@
           <!-- /.col-md-5 -->
           <div class="col-md-7 black-half pt80 pb80">
             <header class="section-title">
-              <h6 class="small-title">Our services.</h6>
-              <h1 class="main-title">We create stunning websites quickly.</h1>
-              <p class="sub-title">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                consequat.</p>
+              <h6 class="small-title">{{ 'homePage.ourServices.title' | translate }}</h6>
+              <h1 class="main-title">{{ 'homePage.ourServices.heading' | translate }}</h1>
+              <p class="sub-title">{{ 'homePage.ourServices.description' | translate }}</p>
             </header>
             <!-- /.section-title -->
 
@@ -104,9 +102,8 @@
                   </div>
                   <!-- /.box-left -->
                   <div class="box-right">
-                    <h5>Professional Design</h5>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
-                      et dolore magna aliqua.</p>
+                    <h5>{{ 'homePage.ourServices.design' | translate }}</h5>
+                    <p>{{ 'homePage.ourServices.designDescription' | translate }}</p>
                   </div>
                   <!-- /.box-right -->
                 </div>
@@ -121,9 +118,8 @@
                   </div>
                   <!-- /.box-left -->
                   <div class="box-right">
-                    <h5>Fully Responsive</h5>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
-                      et dolore magna aliqua.</p>
+                    <h5>{{ 'homePage.ourServices.cuttingEdge' | translate }}</h5>
+                    <p>{{ 'homePage.ourServices.cuttingEdgeDescription' | translate }}</p>
                   </div>
                   <!-- /.box-right -->
                 </div>
@@ -138,9 +134,8 @@
                   </div>
                   <!-- /.box-left -->
                   <div class="box-right">
-                    <h5>Easy to use</h5>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
-                      et dolore magna aliqua.</p>
+                    <h5>{{ 'homePage.ourServices.legacySupport' | translate }}</h5>
+                    <p>{{ 'homePage.ourServices.legacySupportDescription' | translate }}</p>
                   </div>
                   <!-- /.box-right -->
                 </div>
@@ -155,9 +150,8 @@
                   </div>
                   <!-- /.box-left -->
                   <div class="box-right">
-                    <h5>Video Tutorials</h5>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
-                      et dolore magna aliqua.</p>
+                    <h5>{{ 'homePage.ourServices.customerService' | translate }}</h5>
+                    <p [innerHTML]="'homePage.ourServices.customerServiceDescription' | translate"></p>
                   </div>
                   <!-- /.box-right -->
                 </div>
@@ -174,27 +168,52 @@
       </div>
       <!-- /.container-fluid -->
     </section>
-
-    <section class="parallax-section possibilities-section" appParallax>
-      <section class="content-section primary-grad">
+    <!-- /.parallax-section -->
+    <section class="parallax-section technology-section" appParallax>
+      <section class="content-section white-grad">
         <div class="container">
-          <div class="row text-center">
-            <header class="section-title mbn">
-              <h6 class="small-title">Easy to use!</h6>
-              <h1 class="main-title">Endless Possibilities.</h1>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                magna aliqua.</p>
-              <a href="https://themeforest.net/cart/configure_before_adding/18016228?license=regular&ref=salttechno&size=source&support=bundle_12month"
-                class="btn st-btn btn-rounded " target="_blank">Buy Now</a>
-            </header>
+          <div class="row title">
+            <h2>{{'homePage.techUsed' | translate}}</h2>
           </div>
-          <!-- /.row -->
+          <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="center center">
+            <div class="logo-container" fxLayout="row" fxLayout.xs="column" fxLayout.sm="column">
+              <div fxFlex>
+                <img src="./assets/logos/tech/html-5.svg">
+              </div>
+              <div fxFlex>
+                <img src="./assets/logos/tech/css-3.svg">
+              </div>
+              <div fxFlex>
+                <img src="./assets/logos/tech/angular-icon.svg">
+              </div>
+              <div fxFlex>
+                <img src="./assets/logos/tech/nodejs.svg">
+              </div>
+              <!-- /.row -->
+            </div>
+            <div class="logo-container" fxLayout="row" fxLayout.xs="column" fxLayout.sm="column">
+              <div fxFlex>
+                <img src="./assets/logos/tech/dotnet.svg">
+              </div>
+              <div fxFlex>
+                <img src="./assets/logos/tech/git-icon.svg">
+              </div>
+              <div fxFlex>
+                <img src="./assets/logos/tech/firebase.svg">
+              </div>
+              <div fxFlex>
+                <img src="./assets/logos/tech/mssql.svg">
+              </div>
+              <!-- /.row -->
+            </div>
+          </div>
         </div>
         <!-- /.container -->
       </section>
       <!-- /.primary-grad -->
     </section>
     <!-- /.parallax-section -->
+
   </div>
 
 </div>

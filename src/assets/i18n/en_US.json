@@ -1,33 +1,71 @@
 {
+    "aboutPage": {
+        "title": "About"
+    },
     "appTitle": "Exceleration Designs",
-    "lang": {
-        "english": "English",
-        "unitedStates": "United States",
-        "unitedKingdom": "United Kingdom"
+    "contactPage": {
+        "title": "Contact Us"
     },
     "footer": {
+        "admin": "Admin",
+        "copyright": "© Exceleration Designs, Inc",
+        "contactUs": "Contact Us",
+        "aboutUs": "About Us",
+        "aboutUsDescription": "Exceleration Designs, is a group of highly experienced technologists who have been in the web design industry since 1998.  Our focus is to craft high quality product and maintain exceptional customer service.",
+        "followUs": "Follow Us",
         "privacyPolicy": "Privacy Policy",
         "termsOfService": "Terms of Service",
-        "copyright": "© Exceleration Designs, Inc"
+        "address": "Denver, Colorado 80202",
+        "email": "contact@excelerationdesigns.com",
+        "phone": "+1 (555) 555-555"
     },
     "homePage": {
+        "consulting": "Technical Consulting",
+        "consultingDescription": "Our experience with a mix of state-of-the-art and legacy software will help any business reach their goals.",
+        "customSoftware": "Application Development",
+        "customSoftwareDescription": "Over 30 years of experience designing commerical grade software for a multitude of applications.",
         "title": "Home",
-        "welcome": "Welcome to",
-        "welcomeDescription": "We are a team of highly trained technologists, able to solve your problem.",
-        "whatWeDo": "What we do?",
+        "ourServices": {
+            "title": "Our Services.",
+            "heading": "We craft technology in beautiful applications.",
+            "description": "Since 1998, our team has been in the business of finding and building the correct technological solution for our customers.  These services range from custom websites, application design and consulting.",
+            "design": "Professional Design",
+            "designDescription": "Our designers have been building robust, modern and classic designs to fit our customer needs.",
+            "cuttingEdge": "Cutting Edge",
+            "cuttingEdgeDescription": "We thrive on learning and using the best tool for the job.  This often means we use a range of tools to solve your business need in the correct manner.",
+            "legacySupport": "Legacy Support",
+            "legacySupportDescription": "Technology moves fast.  We keep our thumb on the latest and greatest while still supporting the classic legacy tools of our industry.",
+            "customerService": "Exceptional Customer Service",
+            "customerServiceDescription": "We pride ourselves on taking care of <strong>you</strong> the customer.  Update the website? Done in 24 hours.  Add new features?  Done after quick consult.  Need to talk?  You can reach us, not a call center."
+        },
         "weBuildTech": "We build technology.",
         "weBuildTechDescription": "Since 1998, Exceleration Designs has been designing, building, and crafting a better experience for the internet.",
         "websiteDesign": "Custom Website Design",
         "websiteDesignDescription": "We craft stunning websites, that are fully responsive, SEO friendly and have a modern design.",
-        "customSoftware": "Application Development",
-        "customSoftwareDescription": "Over 30 years of experience designing commerical grade software for a multitude of applications.",
-        "consulting": "Technical Consulting",
-        "consultingDescription": "Our experience with a mix of state-of-the-art and legacy software will help any business reach their goals."
+        "welcome": "Welcome to",
+        "welcomeDescription": "We are a team of highly trained technologists, able to solve your problem.",
+        "whatWeDo": "What we do?",
+        "techUsed": "Some Technologies We Use"
     },
-    "aboutPage": {
-        "title": "About"
+    "lang": {
+        "english": "English",
+        "unitedKingdom": "United Kingdom",
+        "unitedStates": "United States"
     },
-    "contactPage": {
-        "title": "Contact Us"
+    "servicePage": {
+        "title": "Services",
+        "customWebsites": {
+            "fullTitle": "Custom Websites",
+            "shortTitle": "Websites"
+        },
+        "appDev": {
+            "fullTitle": "App Development",
+            "shortTitle": "Applications"
+        },
+        "consulting": {
+            "fullTitle": "Technical Consulting",
+            "shortTitle": "Consulting"
+        }
+
     }
 }

@@ -388,6 +388,13 @@ section.content-section {
             color: $white-color;
         }
     }
+    .white-grad {
+        @include background(linear-gradient(to right, rgba($light-gray-color, 0.9), rgba($dark-gray, 0.9)));
+        color: $black-color;
+        h1, h2, h3, h4, h5, h6 {
+            color: $black-color;
+        }
+    }
     .black-grad {
         background: $black-color;
         background: rgba($black-color, 0.6);

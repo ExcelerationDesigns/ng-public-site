@@ -3,28 +3,25 @@
   <div class="container top-container">
     <div class="row">
       <div class="col-md-4 col-sm-6">
-        <h6>About Us</h6>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <h6>{{'footer.aboutUs' | translate}}</h6>
+        <p>{{'footer.aboutUsDescription' | translate}}</p>
       </div>
       <!-- /.col-md-4 -->
 
       <div class="col-md-4 col-sm-6">
-        <h6>Contact Us</h6>
-        <p><i class="ion-ios-map"></i> A902, Brighton, East Sussex, England.</p>
-        <p><i class="ion-ios-mail"></i> support@themesease.com</p>
-        <p><i class="ion-ios-phone-portrait"></i> +1 (123) 456-7890</p>
+        <h6>{{'footer.contactUs' | translate}}</h6>
+        <p><i class="ion-ios-map"></i> {{'footer.address' | translate}}</p>
+        <p><i class="ion-ios-mail"></i> {{'footer.email' | translate}}</p>
+        <p><i class="ion-ios-phone-portrait"></i> {{'footer.phone' | translate}}</p>
       </div>
       <!-- /.col-md-4 col-sm-6 -->
 
       <div class="col-md-4 col-sm-12">
-        <h6>Follow Us</h6>
+        <h6>{{'footer.followUs' | translate}}</h6>
         <a href="#" class="social-link"><i class="ion-logo-facebook"></i></a>
         <a href="#" class="social-link"><i class="ion-logo-twitter"></i></a>
         <a href="#" class="social-link"><i class="ion-logo-instagram"></i></a>
-        <a href="#" class="social-link"><i class="ion-logo-whatsapp"></i></a>
         <a href="#" class="social-link"><i class="ion-logo-googleplus"></i></a>
-        <a href="#" class="social-link"><i class="ion-logo-dribbble"></i></a>
-        <a href="#" class="social-link"><i class="ion-logo-tumblr"></i></a>
       </div>
       <!-- /.col-md-4 col-sm-6 -->
     </div>
@@ -40,7 +37,7 @@
             <p>{{'footer.copyright' | translate}}  | {{getCurrentYear()}}</p>
           </div>
           <div fxFlex class="privacy">
-            <a>{{'footer.privacyPolicy' | translate}}</a> | <a>{{'footer.termsOfService' | translate}}</a>
+            <a>{{'footer.privacyPolicy' | translate}}</a> | <a>{{'footer.termsOfService' | translate}}</a> | <a routerLink="/admin">{{'footer.admin' | translate}}</a>
           </div>
         </div>
       </div>

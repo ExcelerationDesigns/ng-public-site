@@ -14,6 +14,10 @@ const appRoutes: Routes = [
     path: 'about',
   },
   {
+    loadChildren: 'app/pages/admin-page/admin-page.module#AdminPageModule',
+    path: 'admin',
+  },
+  {
     loadChildren: 'app/pages/home-page/home-page.module#HomePageModule',
     path: 'home',
   },

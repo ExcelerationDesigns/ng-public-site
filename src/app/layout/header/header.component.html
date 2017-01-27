@@ -2,19 +2,29 @@
   <!-- TODO: figure out if the <nav> should go inside of a <header> element. -->
   <nav class="navbar navbar-fixed-top" fxShow="false" fxShow.gt-sm fxLayout="row" fxLayoutAlign="space-between center">
     <div class="lang-buttons" fxFlex="100px">
-      <img [mdMenuTriggerFor]="menu" class="edi-lang" src="{{lang.getCurrentImageStr()}}" alt="Angular">
+      <img [mdMenuTriggerFor]="menu" class="edi-lang" src="{{lang.getCurrentImageStr()}}">
       <md-menu y-position="below" x-position="after" overlapTripper="true" #menu="mdMenu">
         <button md-menu-item (click)="langClicked('en_GB')">
-          <img class="edi-lang" src="./assets/flags-iso/flat/32/GB.png" alt="Angular">
+          <img class="edi-lang" src="./assets/flags-iso/flat/32/GB.png">
         </button>
         <button md-menu-item (click)="langClicked('en_US')">
-          <img class="edi-lang" src="./assets/flags-iso/flat/32/US.png" alt="Angular">
+          <img class="edi-lang" src="./assets/flags-iso/flat/32/US.png">
         </button>
       </md-menu>
     </div>
-    <div fxFlex="60">
-      <a md-button routerLink="/home" routerLinkActive="active">{{'homePage.title' | translate}}</a>
-      <a md-button routerLink="/about" routerLinkActive="active">{{'aboutPage.title' | translate}}</a>
+    <div fxFlex="60" fxLayout="row">
+      <a md-button fxFlex="100px" routerLink="/home" routerLinkActive="active">{{'homePage.title' | translate}}</a>
+      <div fxFlex="100px">
+        <a md-button [mdMenuTriggerFor]="serviceMenu">
+          {{'servicePage.title' | translate}}
+        </a>
+        <md-menu y-position="below" overlapTripper="true" #serviceMenu="mdMenu">
+          <button md-menu-item> {{'servicePage.customWebsites.fullTitle' | translate}} </button>
+          <button md-menu-item> {{'servicePage.appDev.fullTitle' | translate}} </button>
+          <button md-menu-item> {{'servicePage.consulting.fullTitle' | translate}} </button>
+        </md-menu>
+      </div>
+      <a md-button fxFlex="100px" routerLink="/about" routerLinkActive="active">{{'aboutPage.title' | translate}}</a>
     </div>
     <div fxFlex>
       <a class="brand" routerLink="/">
