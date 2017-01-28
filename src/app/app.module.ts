@@ -22,7 +22,6 @@ import { AppComponent } from './app.component';
 import { NotFoundComponent } from './layout/not-found/not-found.component';
 import { HeaderComponent } from './layout/header/header.component';
 import { FooterComponent } from './layout/footer/footer.component';
-import { SidebarComponent } from './layout/sidebar/sidebar.component';
 import { BottomNavComponent } from './layout/bottom-nav/bottom-nav.component';
 
 import { CoreModule } from './core/core.module';
@@ -55,7 +54,6 @@ export function createTranslateLoader(http: Http, pl: PlatformLocation) {
     NotFoundComponent,
     HeaderComponent,
     FooterComponent,
-    SidebarComponent,
     BottomNavComponent
   ],
   imports: [

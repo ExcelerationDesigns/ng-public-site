@@ -20,12 +20,12 @@ import { MatchMediaObservableProvider, MediaChange } from '@angular/flex-layout'
 import { buildTranslationPathFromHref, createTranslateLoader } from './app.module';
 import { CoreModule } from './core/core.module';
 import { LangService } from './core/utility/lang.service';
+import { SharedModule } from './shared/shared.module';
 
 import { AppComponent } from './app.component';
 import { NotFoundComponent } from './layout/not-found/not-found.component';
 import { HeaderComponent } from './layout/header/header.component';
 import { FooterComponent } from './layout/footer/footer.component';
-import { SidebarComponent } from './layout/sidebar/sidebar.component';
 import { BottomNavComponent } from './layout/bottom-nav/bottom-nav.component';
 
 import { RouterLinkStubDirective, RouterOutletStubComponent, RouterStub, ActivatedRouteStub } from './testing/router-stubs.spec';
@@ -52,7 +52,6 @@ describe('AppComponent', () => {
         NotFoundComponent,
         HeaderComponent,
         FooterComponent,
-        SidebarComponent,
         BottomNavComponent,
         RouterLinkStubDirective,
         RouterOutletStubComponent
@@ -65,6 +64,7 @@ describe('AppComponent', () => {
           useFactory: (createTranslateLoader)
         }),
         CoreModule,
+        SharedModule,
         AngularFireModule,
         MaterialModule.forRoot(),
         FlexLayoutModule.forRoot(),
@@ -89,6 +89,7 @@ describe('AppComponent', () => {
     .compileComponents()
     .then(() => {
       fixture = TestBed.createComponent(AppComponent);
+      fixture.detectChanges();
       appComponent = fixture.componentInstance;
     });
 
@@ -134,6 +135,8 @@ describe('AppComponent', () => {
 
     // this will request the translation from the backend because we use a static files loader for TranslateService
     translate.get('TEST').subscribe((res: string) => {
+
+      fixture.detectChanges();
       expect(res).toEqual('This is a test');
     });
 
@@ -142,6 +145,8 @@ describe('AppComponent', () => {
 
     // this will request the translation from downloaded translations without making a request to the backend
     translate.get('TEST2').subscribe((res: string) => {
+
+      fixture.detectChanges();
       expect(res).toEqual('This is another test');
     });
   });
@@ -163,6 +168,7 @@ describe('AppComponent', () => {
     // mock response after the xhr request, otherwise it will be undefined
     mockBackendResponse(connection, '{"appTitle": "Exceleration Designs"}');
 
+    fixture.detectChanges();
     expect(title.getTitle()).toEqual('Exceleration Designs');
 
   }));

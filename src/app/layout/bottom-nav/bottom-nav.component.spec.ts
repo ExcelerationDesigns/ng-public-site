@@ -16,7 +16,7 @@ import { RouterLinkStubDirective, RouterOutletStubComponent, RouterStub, Activat
 
 import { BottomNavComponent } from './bottom-nav.component';
 
-describe('NotFoundComponent', () => {
+describe('BottomNavComponent', () => {
   let component: BottomNavComponent;
   let fixture: ComponentFixture<BottomNavComponent>;
 
@@ -42,7 +42,12 @@ describe('NotFoundComponent', () => {
         NO_ERRORS_SCHEMA
       ]
     })
-    .compileComponents();
+    .compileComponents()
+    .then(() => {
+      fixture = TestBed.createComponent(BottomNavComponent);
+      fixture.detectChanges();
+    });
+
   }));
 
   beforeEach(() => {

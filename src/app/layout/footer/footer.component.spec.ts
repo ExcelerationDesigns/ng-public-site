@@ -16,7 +16,7 @@ import { RouterLinkStubDirective, RouterOutletStubComponent, RouterStub, Activat
 
 import { FooterComponent } from './footer.component';
 
-describe('NotFoundComponent', () => {
+describe('FooterComponent', () => {
   let component: FooterComponent;
   let fixture: ComponentFixture<FooterComponent>;
 
@@ -42,7 +42,12 @@ describe('NotFoundComponent', () => {
         NO_ERRORS_SCHEMA
       ]
     })
-    .compileComponents();
+    .compileComponents()
+    .then(() => {
+      fixture = TestBed.createComponent(FooterComponent);
+      fixture.detectChanges();
+    });
+
   }));
 
   beforeEach(() => {
