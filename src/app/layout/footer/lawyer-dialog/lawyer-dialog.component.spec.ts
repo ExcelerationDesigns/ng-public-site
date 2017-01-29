@@ -15,7 +15,6 @@ import { LawyerDialogComponent } from './lawyer-dialog.component';
 })
 class DialogTestModule { }
 
-
 describe('LawyerDialogComponent', () => {
   let component: LawyerDialogComponent;
   let dialog: MdDialog;
