@@ -15,8 +15,32 @@
   </section>
   <!-- /.primary-grad -->
 </section>
-<md-tab-group>
-  <md-tab label="Tab 1"></md-tab>
-  <md-tab label="Tab 2"></md-tab>
-</md-tab-group>
+<section class="content-section">
+  <div class="container">
+
+    <div class="row">
+      <div class="col-md-6">
+        <div class="feature-box link text-center" routerLink="./blogs">
+          <i class="icon primary ion-ios-book"></i>
+          <h4>{{ 'adminPage.blogs' | translate }}</h4>
+          <i class="bg-icon primary ion-ios-book"></i>
+        </div>
+        <!-- /.feature-box -->
+      </div>
+
+      <div class="col-md-6">
+        <div class="feature-box link text-center" routerLink="./details">
+          <i class="icon primary ion-ios-archive"></i>
+          <h4>{{ 'adminPage.details' | translate }}</h4>
+          <i class="bg-icon primary ion-ios-archive"></i>
+        </div>
+        <!-- /.feature-box -->
+      </div>
+
+    </div>
+    <!-- /.row -->
+  </div>
+  <!-- /.container -->
+</section>
+
 <router-outlet></router-outlet>
