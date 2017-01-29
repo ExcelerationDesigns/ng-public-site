@@ -1,6 +1,7 @@
 import 'rxjs/add/operator/map';
 
 import { Component, Inject, OnInit, OnDestroy } from '@angular/core';
+import { Router, NavigationEnd } from '@angular/router';
 import { Title } from '@angular/platform-browser';
 import { MediaChange } from '@angular/flex-layout';
 import { ObservableMediaService } from '@angular/flex-layout/media-query/observable-media-service';
@@ -16,11 +17,13 @@ import { TranslateService } from 'ng2-translate/ng2-translate';
 })
 export class AppComponent implements OnInit, OnDestroy {
   isMobile: boolean = false;
-  private watcher: Subscription;
+  private mediaQueryWatcher: Subscription;
+  private routeWatcher: Subscription;
 
   constructor(private titleService: Title,
               private translate: TranslateService,
               private angulartics2GoogleAnalytics: Angulartics2GoogleAnalytics,
+              private router: Router,
               @Inject(ObservableMediaService) private media$) {
     // this language will be used as a fallback when a translation isn't found in the current language
     translate.setDefaultLang('en_US');
@@ -34,16 +37,30 @@ export class AppComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     this.watchMediaQueryChanges();
+    this.registerScrollToTop();
+  }
+
+  registerScrollToTop() {
+    this.routeWatcher = this.router.events.subscribe((evt) => {
+      if (!(evt instanceof NavigationEnd)) {
+        return;
+      }
+      document.body.scrollTop = 0;
+    });
   }
 
   ngOnDestroy() {
-    if (this.watcher) {
-      this.watcher.unsubscribe();
+    if (this.routeWatcher) {
+      this.routeWatcher.unsubscribe();
+    }
+
+    if (this.mediaQueryWatcher) {
+      this.mediaQueryWatcher.unsubscribe();
     }
   }
 
   watchMediaQueryChanges() {
-    this.watcher = this.media$.subscribe((change: MediaChange) => {
+    this.mediaQueryWatcher = this.media$.subscribe((change: MediaChange) => {
       this.isMobile = (change.mqAlias === 'xs') || (change.mqAlias === 'sm');
     });
   }
