@@ -18,12 +18,7 @@ import { firebaseConfig as FireBaseConfig,
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-
-import { NotFoundComponent } from './layout/not-found/not-found.component';
-import { HeaderComponent } from './layout/header/header.component';
-import { FooterComponent } from './layout/footer/footer.component';
-import { BottomNavComponent } from './layout/bottom-nav/bottom-nav.component';
-
+import { LayoutModule } from './layout/layout.module';
 import { CoreModule } from './core/core.module';
 import { SharedModule } from './shared/shared.module';
 import { LangService } from './core/utility/lang.service';
@@ -48,20 +43,17 @@ export function createTranslateLoader(http: Http, pl: PlatformLocation) {
 }
 
 @NgModule({
-  bootstrap: [AppComponent],
+  bootstrap: [
+    AppComponent
+  ],
   declarations: [
-    AppComponent,
-    NotFoundComponent,
-    HeaderComponent,
-    FooterComponent,
-    BottomNavComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
     Angulartics2Module.forRoot([Angulartics2GoogleAnalytics]),
-    AppRoutingModule,
     TranslateModule.forRoot({
       deps: [Http, PlatformLocation],
       provide: TranslateLoader,
@@ -71,8 +63,9 @@ export function createTranslateLoader(http: Http, pl: PlatformLocation) {
     FlexLayoutModule.forRoot(),
     CoreModule,
     SharedModule,
+    LayoutModule,
     AngularFireModule.initializeApp(FireBaseConfig, FirebaseAuthConfig),
-
+    AppRoutingModule,
   ],
   providers: [
     Title,
