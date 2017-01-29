@@ -17,7 +17,9 @@
         "termsOfService": "Terms of Service",
         "address": "Denver, Colorado 80202",
         "email": "contact@excelerationdesigns.com",
-        "phone": "+1 (555) 555-555"
+        "phone": "+1 (555) 555-555",
+        "privacy": "Privacy Statement",
+        "tos": "Terms of Service"
     },
     "homePage": {
         "consulting": "Technical Consulting",

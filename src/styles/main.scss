@@ -435,6 +435,9 @@ section.content-section {
     p {
         margin-bottom: 0;
     }
+    &.link {
+        cursor: pointer;
+    }
     .icon {
         display: block;
         width: 85px;
@@ -445,6 +448,9 @@ section.content-section {
         border-radius: 50%;
         @include transition(all 0.4s ease-in-out);
         margin-bottom: 10px;
+        &.primary {
+            color: $primary-color;
+        }
     }
     .bg-icon {
         position: absolute;
@@ -454,6 +460,9 @@ section.content-section {
         right: -20px;
         font-size: 150px;
         opacity: 0.1;
+        &.primary {
+            color: $primary-color;
+        }
     }
     &:hover {
         background: $black-color;
@@ -461,6 +470,10 @@ section.content-section {
         .icon {
             color: $primary-color;
             background-color: $white-color;
+
+            &.primary {
+                color: $black-color;
+            }
         }
         .bg-icon {
             color: $light-gray-color;
