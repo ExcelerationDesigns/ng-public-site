@@ -12,7 +12,7 @@ import { MaterialModule } from '@angular/material';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { TranslateModule, TranslateService, TranslateLoader, TranslateStaticLoader } from 'ng2-translate/ng2-translate';
-import { AngularFireModule } from 'angularfire2';
+import { AngularFireModule, AngularFire } from 'angularfire2';
 import { Angulartics2, Angulartics2Module, Angulartics2GoogleAnalytics } from 'angulartics2';
 import { Subscription } from 'rxjs/Subscription';
 import { ObservableMediaServiceProvider, MediaChange } from '@angular/flex-layout';
@@ -27,6 +27,8 @@ import { NotFoundComponent } from './layout/not-found/not-found.component';
 import { HeaderComponent } from './layout/header/header.component';
 import { FooterComponent } from './layout/footer/footer.component';
 import { BottomNavComponent } from './layout/bottom-nav/bottom-nav.component';
+import { firebaseConfig as FireBaseConfig,
+         firebaseAuthConfig as FirebaseAuthConfig } from '../environments/firebase';
 
 import { RouterLinkStubDirective, RouterOutletStubComponent, RouterStub, ActivatedRouteStub } from './testing/router-stubs.spec';
 
@@ -69,6 +71,7 @@ describe('AppComponent', () => {
         MaterialModule.forRoot(),
         FlexLayoutModule.forRoot(),
         Angulartics2Module.forRoot([Angulartics2GoogleAnalytics]),
+        AngularFireModule.initializeApp(FireBaseConfig, FirebaseAuthConfig),
       ],
       providers: [
         Title,
@@ -80,7 +83,8 @@ describe('AppComponent', () => {
         { provide: Location, useClass: SpyLocation },
         { provide: ActivatedRoute, useClass: ActivatedRouteStub },
         ObservableMediaServiceProvider,
-        LangService
+        LangService,
+        AngularFire
       ],
       schemas: [
         NO_ERRORS_SCHEMA

@@ -93,7 +93,7 @@
             <p>{{'footer.copyright' | translate}}  | {{getCurrentYear()}}</p>
           </div>
           <div fxFlex class="privacy">
-            <a (click)="openLawyerDialog('privacy')">{{'footer.privacyPolicy' | translate}}</a> | <a (click)="openLawyerDialog('tos')">{{'footer.termsOfService' | translate}}</a> | <a routerLink="/admin">{{'footer.admin' | translate}}</a>
+            <a (click)="openLawyerDialog('privacy')">{{'footer.privacyPolicy' | translate}}</a> | <a (click)="openLawyerDialog('tos')">{{'footer.termsOfService' | translate}}</a> | <a routerLink="/admin">{{'footer.admin' | translate}}</a><span *ngIf="authService.isLoggedIn"> | <a  (click)="logout()">{{'loginPage.logout' | translate}}</a></span>
           </div>
         </div>
       </div>

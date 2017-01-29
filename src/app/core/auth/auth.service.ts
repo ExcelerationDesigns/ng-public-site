@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { Injectable } from '@angular/core';
 
 import { TranslateService } from 'ng2-translate/ng2-translate';
@@ -13,7 +14,8 @@ export class AuthService {
   redirectUrl: string;
 
   constructor(private af: AngularFire,
-              private translate: TranslateService) {
+              private translate: TranslateService,
+              private router: Router) {
 
     this.subscribeToLogin();
   }
@@ -25,48 +27,31 @@ export class AuthService {
   logout() {
     this.af.auth.logout();
     this.isLoggedIn = false;
+    this.router.navigate(['/home']);
   }
 
   loginGitHub() {
     // Social provider popup
-    this.af.auth.login({
+    return this.af.auth.login({
       method: AuthMethods.Popup,
       provider: AuthProviders.Github
     });
   }
 
-  logoutGitHub() {
-    this.logout();
-  }
-
   loginGoogle() {
     // Social provider popup
-    this.af.auth.login({
+    return this.af.auth.login({
       method: AuthMethods.Popup,
       provider: AuthProviders.Google,
     });
   }
 
-  logoutGoogle() {
-    this.logout();
-  }
-
-  loginStandard(email: string, password: string) {
-    // Standard Email
-    this.af.auth.login(
-      {
-        email,
-        password
-      },
-      {
-        method: AuthMethods.Password,
-        provider: AuthProviders.Password,
-      }
-    );
-  }
-
-  logoutStandard() {
-    this.logout();
+  loginFacebook() {
+    // Social provider popup
+    return this.af.auth.login({
+      method: AuthMethods.Popup,
+      provider: AuthProviders.Facebook,
+    });
   }
 
   private subscribeToLogin() {

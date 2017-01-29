@@ -2,6 +2,7 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { MdDialog } from '@angular/material';
 
 import { LawyerDialogComponent } from './lawyer-dialog/lawyer-dialog.component';
+import { AuthService } from './../../core/auth/auth.service';
 
 @Component({
   selector: 'app-footer',
@@ -11,7 +12,8 @@ import { LawyerDialogComponent } from './lawyer-dialog/lawyer-dialog.component';
 export class FooterComponent implements OnInit, OnDestroy {
   row: any;
 
-  constructor(public dialog: MdDialog) { }
+  constructor(public dialog: MdDialog,
+              public authService: AuthService) { }
 
   ngOnInit() {
 
@@ -41,6 +43,10 @@ export class FooterComponent implements OnInit, OnDestroy {
 
   public getCurrentYear(): number {
     return new Date().getFullYear();
+  }
+
+  public logout() {
+    this.authService.logout();
   }
 
 }

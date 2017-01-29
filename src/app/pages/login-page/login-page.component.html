@@ -1,0 +1,55 @@
+
+<!-- ========== HEADER ========== -->
+<section class="parallax-section" appParallax>
+  <section class="content-section black-grad">
+    <div class="container">
+      <div class="row text-center">
+        <header class="section-title page-title mbn">
+          <h1 class="main-title">{{'loginPage.title' | translate}}</h1>
+          <p>{{'loginPage.description' | translate}}</p>
+        </header>
+      </div>
+      <!-- /.row -->
+    </div>
+    <!-- /.container -->
+  </section>
+  <!-- /.primary-gra<!-- ========== INTRO SECTION ========== -->
+<section class="content-section">
+  <div class="container">
+
+    <div class="row">
+      <div class="col-md-4">
+        <div class="feature-box link text-center" (click)="loginGitHub()">
+          <i class="icon primary ion-logo-github"></i>
+          <h4>{{ 'loginPage.github' | translate }}</h4>
+          <i class="bg-icon primary ion-logo-github"></i>
+        </div>
+        <!-- /.feature-box -->
+      </div>
+      <!-- /.col-md-4 -->
+
+      <div class="col-md-4">
+        <div class="feature-box link text-center" (click)="loginGoogle()">
+          <i class="icon primary ion-logo-google"></i>
+          <h4>{{ 'loginPage.google' | translate }}</h4>
+          <i class="bg-icon primary ion-logo-google"></i>
+        </div>
+        <!-- /.feature-box -->
+      </div>
+      <!-- /.col-md-4 -->
+
+      <div class="col-md-4">
+        <div class="feature-box link text-center" (click)="loginFacebook()">
+          <i class="icon primary ion-logo-facebook"></i>
+          <h4>{{ 'loginPage.facebook' | translate }}</h4>
+          <i class="bg-icon primary ion-logo-facebook"></i>
+        </div>
+        <!-- /.feature-box -->
+      </div>
+      <!-- /.col-md-4 -->
+
+    </div>
+    <!-- /.row -->
+  </div>
+  <!-- /.container -->
+</section>

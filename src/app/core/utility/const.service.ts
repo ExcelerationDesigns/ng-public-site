@@ -6,5 +6,5 @@ export class ConstService {
   //
   // Internal Routes
   //
-  public readonly loginRoute: string = `/more`;
+  public readonly loginRoute: string = `/login`;
 }

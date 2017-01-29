@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from './../../core/auth/auth.service';
 
 @Component({
   selector: 'app-admin-page',
@@ -6,14 +7,17 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './admin-page.component.html'
 })
 export class AdminPageComponent implements OnInit {
-  private testVar = 'test';
 
-  constructor() {
-    console.log(`constructor(AdminPageComponent): ${this.testVar}`);
+  displayName = this.getDisplayName();
+
+  constructor(private authService: AuthService) {
   }
 
   ngOnInit() {
-    console.log(`ngOnInit(AdminPageComponent): ${this.testVar}`);
+  }
+
+  getDisplayName() {
+    return { value: this.authService.getDisplayName() };
   }
 
 }

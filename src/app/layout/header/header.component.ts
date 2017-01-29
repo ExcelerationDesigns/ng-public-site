@@ -1,6 +1,7 @@
 import { Component, OnInit, Output, EventEmitter, ViewChild, OnDestroy, AfterContentInit } from '@angular/core';
 import { MdMenu } from '@angular/material';
 import { LangService } from './../../core/utility/lang.service';
+import { AuthService } from './../../core/auth/auth.service';
 
 @Component({
   selector: 'app-header',
@@ -14,7 +15,8 @@ export class HeaderComponent implements OnInit, OnDestroy, AfterContentInit {
   @ViewChild(MdMenu)
   private menuComponent: MdMenu;
 
-  constructor(public lang: LangService) { }
+  constructor(public lang: LangService,
+              public authService: AuthService) { }
 
   ngOnInit() {
   }
@@ -29,6 +31,10 @@ export class HeaderComponent implements OnInit, OnDestroy, AfterContentInit {
 
   langClicked(lang: string): void {
     this.onLangClicked.emit(lang);
+  }
+
+  public logout() {
+    this.authService.logout();
   }
 
 }
