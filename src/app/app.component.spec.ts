@@ -15,7 +15,7 @@ import { TranslateModule, TranslateService, TranslateLoader, TranslateStaticLoad
 import { AngularFireModule } from 'angularfire2';
 import { Angulartics2, Angulartics2Module, Angulartics2GoogleAnalytics } from 'angulartics2';
 import { Subscription } from 'rxjs/Subscription';
-import { MatchMediaObservableProvider, MediaChange } from '@angular/flex-layout';
+import { ObservableMediaServiceProvider, MediaChange } from '@angular/flex-layout';
 
 import { buildTranslationPathFromHref, createTranslateLoader } from './app.module';
 import { CoreModule } from './core/core.module';
@@ -79,7 +79,7 @@ describe('AppComponent', () => {
         { provide: Router, useClass: RouterStub },
         { provide: Location, useClass: SpyLocation },
         { provide: ActivatedRoute, useClass: ActivatedRouteStub },
-        MatchMediaObservableProvider,
+        ObservableMediaServiceProvider,
         LangService
       ],
       schemas: [
