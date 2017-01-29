@@ -1,6 +1,9 @@
+import 'rxjs/add/operator/map';
+
 import { Component, Inject, OnInit, OnDestroy } from '@angular/core';
 import { Title } from '@angular/platform-browser';
-import { MatchMediaObservable, MediaChange } from '@angular/flex-layout';
+import { MediaChange } from '@angular/flex-layout';
+import { ObservableMediaService } from '@angular/flex-layout/media-query/observable-media-service';
 import { Angulartics2GoogleAnalytics } from 'angulartics2';
 import { Subscription } from 'rxjs/Subscription';
 
@@ -18,7 +21,7 @@ export class AppComponent implements OnInit, OnDestroy {
   constructor(private titleService: Title,
               private translate: TranslateService,
               private angulartics2GoogleAnalytics: Angulartics2GoogleAnalytics,
-              @Inject(MatchMediaObservable) private media$) {
+              @Inject(ObservableMediaService) private media$) {
     // this language will be used as a fallback when a translation isn't found in the current language
     translate.setDefaultLang('en_US');
 

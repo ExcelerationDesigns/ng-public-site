@@ -22,7 +22,7 @@ import { TranslateModule, TranslateService, TranslateLoader, TranslateParser } f
 
 import { HeaderComponent } from './header.component';
 
-describe('NotFoundComponent', () => {
+describe('HeaderComponent', () => {
   let component: HeaderComponent;
   let fixture: ComponentFixture<HeaderComponent>;
 

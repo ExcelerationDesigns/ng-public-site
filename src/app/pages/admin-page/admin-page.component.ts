@@ -6,10 +6,14 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './admin-page.component.html'
 })
 export class AdminPageComponent implements OnInit {
+  private testVar = 'test';
 
-  constructor() { }
+  constructor() {
+    console.log(`constructor(AdminPageComponent): ${this.testVar}`);
+  }
 
   ngOnInit() {
+    console.log(`ngOnInit(AdminPageComponent): ${this.testVar}`);
   }
 
 }

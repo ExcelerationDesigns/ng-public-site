@@ -42,7 +42,11 @@ describe('NotFoundComponent', () => {
         NO_ERRORS_SCHEMA
       ]
     })
-    .compileComponents();
+    .compileComponents()
+    .then(() => {
+      fixture = TestBed.createComponent(NotFoundComponent);
+      fixture.detectChanges();
+    });
   }));
 
   beforeEach(() => {
