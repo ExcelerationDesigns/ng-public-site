@@ -6,12 +6,17 @@ import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
 import { LawyerDialogComponent } from './lawyer-dialog.component';
+import { TranslateModule, TranslateService, TranslateLoader, TranslateParser } from 'ng2-translate/ng2-translate';
 
 @NgModule({
   declarations: [LawyerDialogComponent],
   entryComponents: [LawyerDialogComponent],
   exports: [LawyerDialogComponent],
-  imports: [MdDialogModule],
+  imports: [
+    MdDialogModule,
+    MaterialModule,
+    TranslateModule
+  ]
 })
 class DialogTestModule { }
 
@@ -24,9 +29,13 @@ describe('LawyerDialogComponent', () => {
     TestBed.configureTestingModule({
       imports: [
         DialogTestModule,
-        MdDialogModule.forRoot()
+        MdDialogModule.forRoot(),
+        TranslateModule,
       ],
       providers: [
+        TranslateService,
+        TranslateLoader,
+        TranslateParser,
         {
           provide: OverlayContainer, useFactory: () => {
             overlayContainerElement = document.createElement('div');

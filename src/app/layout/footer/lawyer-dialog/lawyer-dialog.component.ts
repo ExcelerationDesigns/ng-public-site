@@ -8,7 +8,7 @@ import { MdDialogRef } from '@angular/material';
 })
 export class LawyerDialogComponent implements OnInit {
 
-  public textContent: string = '';
+  public selectedTab: number = 0;
 
   constructor(public dialogRef: MdDialogRef<LawyerDialogComponent>) { }
 

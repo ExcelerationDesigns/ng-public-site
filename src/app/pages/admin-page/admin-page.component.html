@@ -1,3 +1,22 @@
-<p>
-  admin-page works!
-</p>
+<!-- ========== HEADER ========== -->
+<section class="parallax-section" appParallax>
+  <section class="content-section black-grad">
+    <div class="container">
+      <div class="row text-center">
+        <header class="section-title page-title mbn">
+          <h6 class="small-title">{{'adminPage.welcome' | translate: displayName}} </h6>
+          <h1 class="main-title">{{'adminPage.title' | translate}}</h1>
+          <p>{{'adminPage.description' | translate}}</p>
+        </header>
+      </div>
+      <!-- /.row -->
+    </div>
+    <!-- /.container -->
+  </section>
+  <!-- /.primary-grad -->
+</section>
+<md-tab-group>
+  <md-tab label="Tab 1"></md-tab>
+  <md-tab label="Tab 2"></md-tab>
+</md-tab-group>
+<router-outlet></router-outlet>

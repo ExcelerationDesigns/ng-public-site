@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
 
 import { NotFoundComponent } from './layout/not-found/not-found.component';
+import { AuthGuardService } from './core/auth/auth-guard.service';
 
 const appRoutes: Routes = [
   {
@@ -14,6 +15,7 @@ const appRoutes: Routes = [
     path: 'about',
   },
   {
+    canActivate: [AuthGuardService],
     loadChildren: 'app/pages/admin-page/admin-page.module#AdminPageModule',
     path: 'admin',
   },
@@ -24,6 +26,10 @@ const appRoutes: Routes = [
   {
     loadChildren: 'app/pages/home-page/home-page.module#HomePageModule',
     path: 'home',
+  },
+  {
+    loadChildren: 'app/pages/login-page/login-page.module#LoginPageModule',
+    path: 'login',
   },
   {
     loadChildren: 'app/pages/service-page/service-page.module#ServicePageModule',

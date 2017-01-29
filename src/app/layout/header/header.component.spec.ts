@@ -9,6 +9,7 @@ import { SpyLocation } from '@angular/common/testing';
 import { Router, RouterModule, ActivatedRoute } from '@angular/router';
 import { PlatformLocation, LocationStrategy } from '@angular/common';
 import { RouterLinkStubDirective, RouterOutletStubComponent, RouterStub, ActivatedRouteStub } from './../../testing/router-stubs.spec';
+import { AngularFireModule, AngularFire } from 'angularfire2';
 
 import { MaterialModule, MdMenuModule,
                         MdMenuTrigger } from '@angular/material';
@@ -16,7 +17,10 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { createTranslateLoader } from './../../app.module';
 import { CoreModule } from './../../core/core.module';
+import { SharedModule } from './../../shared/shared.module';
 import { LangService } from './../../core/utility/lang.service';
+
+import { firebaseConfig, firebaseAuthConfig } from './../../../environments/firebase';
 
 import { TranslateModule, TranslateService, TranslateLoader, TranslateParser } from 'ng2-translate/ng2-translate';
 
@@ -41,9 +45,12 @@ describe('HeaderComponent', () => {
           useFactory: (createTranslateLoader)
         }),
         CoreModule,
+        SharedModule,
+        AngularFireModule,
         MaterialModule.forRoot(),
         FlexLayoutModule.forRoot(),
-        MdMenuModule.forRoot()
+        MdMenuModule.forRoot(),
+        AngularFireModule.initializeApp(firebaseConfig, firebaseAuthConfig),
       ],
       providers: [
         TranslateService,
@@ -52,7 +59,8 @@ describe('HeaderComponent', () => {
         { provide: Router, useClass: RouterStub },
         { provide: Location, useClass: SpyLocation },
         { provide: ActivatedRoute, useClass: ActivatedRouteStub },
-        LangService
+        LangService,
+        AngularFire
       ],
       schemas: [
         NO_ERRORS_SCHEMA

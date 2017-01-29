@@ -1,9 +1,8 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { MdDialog } from '@angular/material';
-import { TranslateService } from 'ng2-translate/ng2-translate';
-import { Subscription } from 'rxjs/Subscription';
 
 import { LawyerDialogComponent } from './lawyer-dialog/lawyer-dialog.component';
+import { AuthService } from './../../core/auth/auth.service';
 
 @Component({
   selector: 'app-footer',
@@ -12,31 +11,42 @@ import { LawyerDialogComponent } from './lawyer-dialog/lawyer-dialog.component';
 })
 export class FooterComponent implements OnInit, OnDestroy {
   row: any;
-  private transSubscription: Subscription;
 
   constructor(public dialog: MdDialog,
-              public translate: TranslateService) { }
+              public authService: AuthService) { }
 
   ngOnInit() {
 
   }
 
   ngOnDestroy() {
-    if (this.transSubscription != null) {
-      this.transSubscription.unsubscribe();
-    }
+
   }
 
   public openLawyerDialog(type: string) {
-    this.transSubscription = this.translate.get(`footer.${type}`).subscribe((res: string) => {
-      const dialogRef = this.dialog.open(LawyerDialogComponent);
-      dialogRef.componentInstance['textContent'] = res;
-    });
+
+    const dialogRef = this.dialog.open(LawyerDialogComponent);
+    let selectedTab = 0;
+    switch (type) {
+    case 'privacy':
+      selectedTab = 0;
+      break;
+    case 'tos':
+      selectedTab = 1;
+      break;
+    default:
+      break;
+    }
+    dialogRef.componentInstance['selectedTab'] = selectedTab;
 
   }
 
   public getCurrentYear(): number {
     return new Date().getFullYear();
+  }
+
+  public logout() {
+    this.authService.logout();
   }
 
 }
