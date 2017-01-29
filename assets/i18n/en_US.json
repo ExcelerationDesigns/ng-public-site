@@ -2,23 +2,28 @@
     "aboutPage": {
         "title": "About"
     },
+    "adminPage": {
+        "description": "Welcome to the Administration section of EDI, feel free to add blogs, adjust details and see usage statistics.",
+        "title": "Administration",
+        "welcome": "Welcome, {{value}}"
+    },
     "appTitle": "Exceleration Designs",
     "contactPage": {
         "title": "Contact Us"
     },
     "footer": {
-        "admin": "Admin",
-        "copyright": "© Exceleration Designs, Inc",
-        "contactUs": "Contact Us",
         "aboutUs": "About Us",
         "aboutUsDescription": "Exceleration Designs, is a group of highly experienced technologists who have been in the web design industry since 1998.  Our focus is to craft high quality product and maintain exceptional customer service.",
-        "followUs": "Follow Us",
-        "privacyPolicy": "Privacy Policy",
-        "termsOfService": "Terms of Service",
         "address": "Denver, Colorado 80202",
+        "admin": "Admin",
+        "contactUs": "Contact Us",
+        "copyright": "© Exceleration Designs, Inc",
         "email": "contact@excelerationdesigns.com",
+        "followUs": "Follow Us",
         "phone": "+1 (555) 555-555",
         "privacy": "Privacy Statement",
+        "privacyPolicy": "Privacy Policy",
+        "termsOfService": "Terms of Service",
         "tos": "Terms of Service"
     },
     "homePage": {
@@ -26,40 +31,43 @@
         "consultingDescription": "Our experience with a mix of state-of-the-art and legacy software will help any business reach their goals.",
         "customSoftware": "Application Development",
         "customSoftwareDescription": "Over 30 years of experience designing commerical grade software for a multitude of applications.",
-        "title": "Home",
         "ourServices": {
-            "title": "Our Services.",
-            "heading": "We craft technology in beautiful applications.",
+            "customerService": "Exceptional Customer Service",
+            "customerServiceDescription": "We pride ourselves on taking care of <strong>you</strong> the customer.  Update the website? Done in 24 hours.  Add new features?  Done after quick consult.  Need to talk?  You can reach us, not a call center.",
+            "cuttingEdge": "Cutting Edge",
+            "cuttingEdgeDescription": "We thrive on learning and using the best tool for the job.  This often means we use a range of tools to solve your business need in the correct manner.",
             "description": "Since 1998, our team has been in the business of finding and building the correct technological solution for our customers.  These services range from custom websites, application design and consulting.",
             "design": "Professional Design",
             "designDescription": "Our designers have been building robust, modern and classic designs to fit our customer needs.",
-            "cuttingEdge": "Cutting Edge",
-            "cuttingEdgeDescription": "We thrive on learning and using the best tool for the job.  This often means we use a range of tools to solve your business need in the correct manner.",
+            "heading": "We craft technology in beautiful applications.",
             "legacySupport": "Legacy Support",
             "legacySupportDescription": "Technology moves fast.  We keep our thumb on the latest and greatest while still supporting the classic legacy tools of our industry.",
-            "customerService": "Exceptional Customer Service",
-            "customerServiceDescription": "We pride ourselves on taking care of <strong>you</strong> the customer.  Update the website? Done in 24 hours.  Add new features?  Done after quick consult.  Need to talk?  You can reach us, not a call center."
+            "title": "Our Services."
         },
+        "techUsed": "Some Technologies We Use",
+        "title": "Home",
         "weBuildTech": "We build technology.",
         "weBuildTechDescription": "Since 1998, Exceleration Designs has been designing, building, and crafting a better experience for the internet.",
         "websiteDesign": "Custom Website Design",
         "websiteDesignDescription": "We craft stunning websites, that are fully responsive, SEO friendly and have a modern design.",
         "welcome": "Welcome to",
         "welcomeDescription": "We are a team of highly trained technologists, able to solve your problem.",
-        "whatWeDo": "What we do?",
-        "techUsed": "Some Technologies We Use"
+        "whatWeDo": "What we do?"
     },
     "lang": {
         "english": "English",
         "unitedKingdom": "United Kingdom",
         "unitedStates": "United States"
     },
+    "loginPage": {
+        "facebook": "Facebook",
+        "github": "GitHub",
+        "google": "Google",
+        "description": "Login, and this will allow you to create blogs, adjust the address and misc details of EDI.",
+        "title": "Login",
+        "logout": "Logout"
+    },
     "servicePage": {
-        "title": "Services",
-        "customWebsites": {
-            "fullTitle": "Custom Websites",
-            "shortTitle": "Websites"
-        },
         "appDev": {
             "fullTitle": "App Development",
             "shortTitle": "Applications"
@@ -67,7 +75,11 @@
         "consulting": {
             "fullTitle": "Technical Consulting",
             "shortTitle": "Consulting"
-        }
-
+        },
+        "customWebsites": {
+            "fullTitle": "Custom Websites",
+            "shortTitle": "Websites"
+        },
+        "title": "Services"
     }
 }
