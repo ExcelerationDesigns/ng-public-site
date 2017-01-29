@@ -4,7 +4,7 @@ import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
 import { ConsultingComponent } from './consulting.component';
-
+/*
 describe('ConsultingComponent', () => {
   let component: ConsultingComponent;
   let fixture: ComponentFixture<ConsultingComponent>;
@@ -26,3 +26,4 @@ describe('ConsultingComponent', () => {
     expect(component).toBeTruthy();
   });
 });
+*/
