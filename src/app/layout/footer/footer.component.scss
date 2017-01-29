@@ -8,6 +8,14 @@
     h5, h6 {
         color: $light-gray-color;
         text-transform: uppercase;
+
+        &[routerlink] {
+
+            cursor: pointer;
+            &:hover {
+                color: $primary-color;
+            }
+        }
     }
     p {
         margin-bottom: 0;
