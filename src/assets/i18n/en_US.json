@@ -4,6 +4,7 @@
     },
     "adminPage": {
         "blogs": "Blog Articles",
+        "dashboard": "Dashboard",
         "description": "Welcome to the Administration section of EDI, feel free to add blogs, adjust details and see usage statistics.",
         "details": "Site Details",
         "shortTitle": "Admin",
