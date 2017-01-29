@@ -8,7 +8,6 @@ import { DebugElement } from '@angular/core';
 import { LawyerDialogComponent } from './lawyer-dialog.component';
 import { TranslateModule, TranslateService, TranslateLoader, TranslateParser } from 'ng2-translate/ng2-translate';
 
-
 @NgModule({
   declarations: [LawyerDialogComponent],
   entryComponents: [LawyerDialogComponent],
