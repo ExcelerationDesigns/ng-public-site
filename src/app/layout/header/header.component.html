@@ -26,6 +26,7 @@
       </div>
       <a md-button fxFlex="100px" routerLink="/about" routerLinkActive="active">{{'aboutPage.title' | translate}}</a>
       <a *ngIf="authService.isLoggedIn" (click)="logout()" md-button fxFlex="100px">{{'loginPage.logout' | translate}}</a>
+      <a *ngIf="authService.isLoggedIn" routerLink="/admin" md-button fxFlex="100px">{{'adminPage.shortTitle' | translate}}</a>
     </div>
     <div fxFlex>
       <a class="brand" routerLink="/">
