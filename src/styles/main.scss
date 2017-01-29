@@ -1122,7 +1122,7 @@ section.content-section {
     position: relative;
     .blog-info {
         position: absolute;
-        opacity: 0;
+        opacity: 1;
         top: 0;
         left: 0;
         width: 100%;
@@ -1145,7 +1145,7 @@ section.content-section {
     }
     &:hover {
         .blog-info {
-            opacity: 1;
+            opacity: 0;
         }
     }
 }
