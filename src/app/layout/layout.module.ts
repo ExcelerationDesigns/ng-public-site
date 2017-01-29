@@ -13,13 +13,18 @@ import { BottomNavComponent } from './bottom-nav/bottom-nav.component';
 
 import { CoreModule } from './../core/core.module';
 import { SharedModule } from './../shared/shared.module';
+import { LawyerDialogComponent } from './footer/lawyer-dialog/lawyer-dialog.component';
 
 @NgModule({
   declarations: [
     NotFoundComponent,
     HeaderComponent,
     FooterComponent,
-    BottomNavComponent
+    BottomNavComponent,
+    LawyerDialogComponent
+  ],
+  entryComponents: [
+    LawyerDialogComponent
   ],
   exports: [
     NotFoundComponent,

@@ -37,7 +37,7 @@
             <p>{{'footer.copyright' | translate}}  | {{getCurrentYear()}}</p>
           </div>
           <div fxFlex class="privacy">
-            <a>{{'footer.privacyPolicy' | translate}}</a> | <a>{{'footer.termsOfService' | translate}}</a> | <a routerLink="/admin">{{'footer.admin' | translate}}</a>
+            <a (click)="openLawyerDialog('privacy')">{{'footer.privacyPolicy' | translate}}</a> | <a (click)="openLawyerDialog('tos')">{{'footer.termsOfService' | translate}}</a> | <a routerLink="/admin">{{'footer.admin' | translate}}</a>
           </div>
         </div>
       </div>
