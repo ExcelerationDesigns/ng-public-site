@@ -19,9 +19,9 @@
           {{'servicePage.title' | translate}}
         </a>
         <md-menu y-position="below" overlapTripper="true" #serviceMenu="mdMenu">
-          <button md-menu-item> {{'servicePage.customWebsites.fullTitle' | translate}} </button>
-          <button md-menu-item> {{'servicePage.appDev.fullTitle' | translate}} </button>
-          <button md-menu-item> {{'servicePage.consulting.fullTitle' | translate}} </button>
+          <button md-menu-item routerLink="/services/website-design"> {{'servicePage.customWebsites.fullTitle' | translate}} </button>
+          <button md-menu-item routerLink="/services/application-development"> {{'servicePage.appDev.fullTitle' | translate}} </button>
+          <button md-menu-item routerLink="/services/technical-consulting"> {{'servicePage.consulting.fullTitle' | translate}} </button>
         </md-menu>
       </div>
       <a md-button fxFlex="100px" routerLink="/about" routerLinkActive="active">{{'aboutPage.title' | translate}}</a>

@@ -18,12 +18,16 @@ const appRoutes: Routes = [
     path: 'admin',
   },
   {
+    loadChildren: 'app/pages/contact-page/contact-page.module#ContactPageModule',
+    path: 'contact',
+  },
+  {
     loadChildren: 'app/pages/home-page/home-page.module#HomePageModule',
     path: 'home',
   },
   {
-    loadChildren: 'app/pages/contact-page/contact-page.module#ContactPageModule',
-    path: 'contact',
+    loadChildren: 'app/pages/service-page/service-page.module#ServicePageModule',
+    path: 'services',
   },
   {
     component: NotFoundComponent,

@@ -51,7 +51,7 @@ describe('ng-public-site App', () => {
 
     it('should have a link to about page', () => {
       page.getNavLinkList().get(2).click().then(() => {
-        expect(page.getAboutPageComponent().getText()).toEqual('About');
+        expect(page.getAboutPageComponent().getText()).toContain('Passionate Developers');
       });
     });
   });
