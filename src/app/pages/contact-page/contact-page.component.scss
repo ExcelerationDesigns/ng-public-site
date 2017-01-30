@@ -1,0 +1,21 @@
+@import './../../../styles/variables';
+
+#{$all-text-inputs} {
+  border: 1px solid darken($light-gray-color, 5%);
+  background: $white-color;
+  padding: 0.618em 1em;
+  box-shadow: none;
+  min-height: 40px;
+  width: 100%;
+}
+#{$all-text-inputs-focus},
+#{$all-text-inputs-hover} {
+  border: 1px solid darken($light-gray-color, 15%);
+  outline: 0;
+  box-shadow: none;
+}
+#{$all-text-inputs-active} {
+  border: 1px solid darken($light-gray-color, 15%);
+  outline: 0;
+  box-shadow: none;
+}

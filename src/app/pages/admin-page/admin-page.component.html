@@ -21,7 +21,7 @@
     <div class="row">
 
       <div class="col-md-4">
-        <div class="feature-box link text-center" routerLink="./">
+        <div class="feature-box link text-center" routerLink="./" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
           <i class="icon primary ion-ios-analytics"></i>
           <h4>{{ 'adminPage.dashboard' | translate }}</h4>
           <i class="bg-icon primary ion-ios-analytics"></i>
@@ -30,7 +30,7 @@
       </div>
 
       <div class="col-md-4">
-        <div class="feature-box link text-center" routerLink="./blogs">
+        <div class="feature-box link text-center" routerLink="./blogs" routerLinkActive="active">
           <i class="icon primary ion-ios-book"></i>
           <h4>{{ 'adminPage.blogs' | translate }}</h4>
           <i class="bg-icon primary ion-ios-book"></i>
@@ -39,7 +39,7 @@
       </div>
 
       <div class="col-md-4">
-        <div class="feature-box link text-center" routerLink="./details">
+        <div class="feature-box link text-center" routerLink="./details" routerLinkActive="active">
           <i class="icon primary ion-ios-archive"></i>
           <h4>{{ 'adminPage.details' | translate }}</h4>
           <i class="bg-icon primary ion-ios-archive"></i>
