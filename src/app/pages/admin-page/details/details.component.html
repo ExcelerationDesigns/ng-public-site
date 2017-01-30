@@ -1,0 +1,38 @@
+<section class="content-section">
+  <div class="container">
+
+    <div class="row">
+
+      <div class="col-md-12">
+        <div class="input-box">
+          <h4>Update Address:</h4>
+          <div fxFlex fxLayout="row" fxLayout.xs="column">
+            <md-input-container fxFlex>
+              <input mdInput placeholder="Address" [(value)]="addressInfo.address">
+            </md-input-container>
+            <md-input-container fxFlex>
+              <input mdInput placeholder="City" [(value)]="addressInfo.city">
+            </md-input-container>
+            <md-input-container fxFlex>
+              <input mdInput placeholder="State" [(value)]="addressInfo.state">
+            </md-input-container>
+            <md-input-container class="example-full-width">
+              <input mdInput #postalCode maxlength="5" placeholder="Postal Code"  [(value)]="addressInfo.zip">
+              <md-hint align="end">{{postalCode.value.length}} / 5</md-hint>
+            </md-input-container>
+            <div>
+              <button class="btn st-btn btn-rounded btn-primary pull-right" (click)="updateAddress()">Submit</button>
+            </div>
+          </div>
+
+
+        </div>
+        <!-- /.feature-box -->
+      </div>
+
+
+    </div>
+    <!-- /.row -->
+  </div>
+  <!-- /.container -->
+</section>

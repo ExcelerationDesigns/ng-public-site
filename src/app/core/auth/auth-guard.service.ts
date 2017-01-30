@@ -2,7 +2,7 @@ import { ConstService } from './../utility/const.service';
 import { AuthService } from './auth.service';
 import { Injectable } from '@angular/core';
 import {
-  CanActivate, Router,
+  CanActivate, Router, CanActivateChild,
   ActivatedRouteSnapshot,
   RouterStateSnapshot
 } from '@angular/router';
@@ -11,7 +11,7 @@ import { TranslateService } from 'ng2-translate/ng2-translate';
 import { AngularFire } from 'angularfire2';
 
 @Injectable()
-export class AuthGuardService implements CanActivate {
+export class AuthGuardService implements CanActivate, CanActivateChild {
 
   constructor(private af: AngularFire,
               private translate: TranslateService,
@@ -24,6 +24,10 @@ export class AuthGuardService implements CanActivate {
     const url: string = state.url;
 
     return this.checkLogin(url);
+  }
+
+  canActivateChild(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean {
+    return this.canActivate(route, state);
   }
 
   checkLogin(url: string): boolean {

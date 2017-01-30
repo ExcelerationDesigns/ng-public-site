@@ -60,6 +60,7 @@ export class AuthService {
         // user logged in
         this.firebaseAuthState = user;
         this.isLoggedIn = true;
+        this.router.navigate([this.redirectUrl]);
       } else {
         // user not logged in
         this.firebaseAuthState = null;

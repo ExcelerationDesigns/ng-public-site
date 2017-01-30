@@ -7,10 +7,16 @@ import { SharedModule } from './../../shared/shared.module';
 
 import { AdminPageRoutingModule } from './admin-page.routing';
 import { AdminPageComponent } from './admin-page.component';
+import { BlogsComponent } from './blogs/blogs.component';
+import { DetailsComponent } from './details/details.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
-    AdminPageComponent
+    AdminPageComponent,
+    BlogsComponent,
+    DetailsComponent,
+    DashboardComponent
   ],
   imports: [
     CommonModule,

@@ -26,7 +26,6 @@ before_script:
 - npm run lint
 - npm run pree2e
 - npm run build
-- npm run test
 - npm run http-server &
 - sleep 1
 

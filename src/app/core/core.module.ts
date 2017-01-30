@@ -1,3 +1,4 @@
+import { AddressService } from './database/address.service';
 import './../rxjs-extensions';
 
 import { NgModule } from '@angular/core';
@@ -30,6 +31,7 @@ import { AuthGuardService } from './auth/auth-guard.service';
     RandomService,
     ConstService,
     AuthGuardService,
+    AddressService,
     AuthService
   ]
 })
