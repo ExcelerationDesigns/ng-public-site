@@ -1,15 +1,31 @@
-@mixin material-modifications() {
+//
+//  This brings in the material theme
+//
+@import '~@angular/material/core/theming/all-theme';
+
+//
+// Bring in the widget level themes to override components
+//
+@import '../app/layout/header/header.theme';
+
+@mixin global-material-modifications($theme) {
+
   .md-menu-content {
     padding-top: 0!important;
     padding-bottom: 0!important;
   }
 
   .md-dialog-container {
-    background-color: white!important;
+    background-color: white;
   }
 
 
   [md-menu-item] {
-    line-height: inherit!important;
+    line-height: inherit;
   }
+
+  //
+  // Call the mixins here
+  //
+  @include header-theme($theme);
 }
