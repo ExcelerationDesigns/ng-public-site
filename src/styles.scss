@@ -1,13 +1,24 @@
+/*--------------------------------------------------------------
+# 1. IMPORT DEFAULT BOOTSTRAP
+--------------------------------------------------------------*/
 $bootstrap-sass-asset-helper: false;
 
 $icon-font-path: if($bootstrap-sass-asset-helper, "bootstrap/", "../node_modules/bootstrap-sass/assets/fonts/bootstrap/");
 @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
 @import '~@angular/material/core/theming/all-theme';
 
-// Include material core styles.
-@include md-core();
+/*--------------------------------------------------------------
+# 2. IMPORT PURCHASED THIRD PARTY
+--------------------------------------------------------------*/
 
 @import './styles/main';
 @import './styles/material-theme';
 
-@include material-modifications();
+
+/*--------------------------------------------------------------
+# 3. IMPORT MATERIAL LIBRARY
+--------------------------------------------------------------*/
+// Include material core styles.
+@include md-core();
+
+@include global-material-modifications();
