@@ -2,6 +2,8 @@
 //  This brings in the material theme
 //
 @import '~@angular/material/core/theming/all-theme';
+$md-font-family: 'Questrial', 'Helvetica Neue', sans-serif;
+@import '~@angular/material/core/style/_variables';
 
 //
 // Bring in the widget level themes to override components

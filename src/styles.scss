@@ -7,16 +7,7 @@ $icon-font-path: if($bootstrap-sass-asset-helper, "bootstrap/", "../node_modules
 @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
 
 /*--------------------------------------------------------------
-# 2. IMPORT PURCHASED THIRD PARTY
---------------------------------------------------------------*/
-// Google Font
-@import url('https://fonts.googleapis.com/css?family=Poppins:600|Questrial|Material+Icons');
-
-
-@import './styles/main';
-
-/*--------------------------------------------------------------
-# 3. IMPORT MATERIAL LIBRARY
+# 2. IMPORT MATERIAL LIBRARY
 --------------------------------------------------------------*/
 
 $md-font-family: 'Questrial', 'Helvetica Neue', sans-serif;
@@ -35,3 +26,14 @@ $theme: md-light-theme($primary, $accent);
 
 @include angular-material-theme($theme);
 @include global-material-modifications($theme);
+
+
+/*--------------------------------------------------------------
+# 3. IMPORT GLOBAL STYLES
+--------------------------------------------------------------*/
+// Google Font
+@import url('https://fonts.googleapis.com/css?family=Poppins:600|Questrial|Material+Icons');
+
+
+@import './styles/main';
+
