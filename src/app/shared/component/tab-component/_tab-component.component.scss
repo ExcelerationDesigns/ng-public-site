@@ -1,0 +1,18 @@
+@import '../../../../styles/variables';
+
+@mixin tab-overrides($theme) {
+
+  md-tab-group {
+    &.flex-stretch {
+      .md-tab-header {
+        justify-content: space-around;
+      }
+      .md-tab-label {
+        width: 100%;
+        font-family: $st-heading-font;
+      }
+    }
+
+  }
+
+}

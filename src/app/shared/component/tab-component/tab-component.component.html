@@ -1,0 +1,10 @@
+<md-tab-group fxFlex fxLayout="row" fxLayoutAlign="space-around center" class="flex-stretch">
+  <md-tab *ngFor="let tab of tabContent" fxFlex>
+    <template md-tab-label>
+      <a><span class="icon" [ngClass]="tab.icon"></span> {{tab.label | translate}}</a>
+    </template>
+    <div class="tab-content">
+      <p>{{tab.content | translate}}</p>
+    </div>
+  </md-tab>
+</md-tab-group>

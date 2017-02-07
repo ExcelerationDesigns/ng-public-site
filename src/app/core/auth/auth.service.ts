@@ -11,7 +11,7 @@ export class AuthService {
   isLoggedIn: boolean = false;
 
   // store the URL so we can redirect after logging in
-  redirectUrl: string;
+  redirectUrl: string = '';
 
   constructor(private af: AngularFire,
               private translate: TranslateService,
@@ -60,7 +60,9 @@ export class AuthService {
         // user logged in
         this.firebaseAuthState = user;
         this.isLoggedIn = true;
-        this.router.navigate([this.redirectUrl]);
+        if (this.redirectUrl.length > 0) {
+          this.router.navigate([this.redirectUrl]);
+        }
       } else {
         // user not logged in
         this.firebaseAuthState = null;

@@ -8,15 +8,18 @@ import { MaterialModule } from '@angular/material';
 import { TranslateModule } from 'ng2-translate/ng2-translate';
 
 import { ParallaxDirective } from './directives/parallax/parallax.directive';
+import { TabComponentComponent } from './component/tab-component/tab-component.component';
 
 @NgModule({
   declarations: [
-    ParallaxDirective
+    ParallaxDirective,
+    TabComponentComponent
   ],
   exports: [
     CommonModule,
     FormsModule,
-    ParallaxDirective
+    ParallaxDirective,
+    TabComponentComponent
   ],
   imports: [
     CommonModule,

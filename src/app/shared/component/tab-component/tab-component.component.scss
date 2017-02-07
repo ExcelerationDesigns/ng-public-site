@@ -1,0 +1,66 @@
+@import '../../../../styles/variables';
+
+md-tab-group {
+    .md-tab-label  {
+        padding: 10px 25px;
+        color: darken($light-gray-color, 30%);
+        font-family: $st-body-font;
+
+        &:hover {
+            background: none;
+            border-color: transparent;
+        }
+    }
+    .md-tab-label-active >
+    .md-tab-label-active > a:focus,
+    .md-tab-label-active > a:hover {
+        color: $black-color;
+        background-color: transparent;
+        border: 1px solid $light-black-color;
+        border-radius: 30px;
+    }
+    .tab-content {
+        padding: 30px 20px 20px;
+        text-align: center;
+        line-height: 26px;
+    }
+
+
+}
+
+
+.tab-style-5 {
+    .nav-tabs {
+        border-bottom: 0;
+        text-align: center;
+    }
+    .nav-tabs>li {
+        display: inline-block;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .nav-tabs>li {
+        float: none;
+    }
+    .nav-tabs>li>a {
+        padding: 10px 25px;
+        color: darken($light-gray-color, 30%);
+        &:hover {
+            background: none;
+            border-color: transparent;
+        }
+    }
+    .nav-tabs>li.active>a,
+    .nav-tabs>li.active>a:focus,
+    .nav-tabs>li.active>a:hover {
+        color: $black-color;
+        background-color: transparent;
+        border: 1px solid $light-black-color;
+        border-radius: 30px;
+    }
+    .tab-content {
+        padding: 30px 20px 20px;
+        text-align: center;
+        line-height: 26px;
+    }
+}

@@ -25,7 +25,9 @@
 
 
 @import './variables';
-@import './ionicons';
+// IonIcons has to be here, otherwise it gets included AND REQUESTED
+// for each file that uses the variables file.
+@import "./typographic/ionicons";
 
 /*--------------------------------------------------------------
 # 3. SLIDERS

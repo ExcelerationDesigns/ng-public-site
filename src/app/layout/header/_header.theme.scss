@@ -1,0 +1,9 @@
+@mixin header-theme($theme) {
+
+  app-header {
+    [md-menu-item] {
+      line-height: inherit;
+    }
+  }
+
+}

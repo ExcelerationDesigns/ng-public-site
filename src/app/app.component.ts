@@ -1,6 +1,6 @@
 import 'rxjs/add/operator/map';
 
-import { Component, Inject, OnInit, OnDestroy } from '@angular/core';
+import { Component, Inject, OnInit, OnDestroy, AfterContentInit } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
 import { Title } from '@angular/platform-browser';
 import { MediaChange } from '@angular/flex-layout';
@@ -15,7 +15,7 @@ import { TranslateService } from 'ng2-translate/ng2-translate';
   styleUrls: ['./app.component.scss'],
   templateUrl: './app.component.html'
 })
-export class AppComponent implements OnInit, OnDestroy {
+export class AppComponent implements OnInit, OnDestroy, AfterContentInit {
   isMobile: boolean = false;
   private mediaQueryWatcher: Subscription;
   private routeWatcher: Subscription;
@@ -36,8 +36,11 @@ export class AppComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit() {
-    this.watchMediaQueryChanges();
     this.registerScrollToTop();
+  }
+
+  ngAfterContentInit() {
+    this.watchMediaQueryChanges();
   }
 
   registerScrollToTop() {
