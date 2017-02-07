@@ -4,10 +4,9 @@
     <div class="container">
       <div class="row text-center">
         <header class="section-title page-title mbn">
-          <h6 class="small-title">Who we are?</h6>
-          <h1 class="main-title">Passionate Developers.</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
-            magna aliqua.</p>
+          <h6 class="small-title">{{'aboutPage.smallTitle' | translate}}</h6>
+          <h1 class="main-title">{{'aboutPage.mainTitle' | translate}}</h1>
+          <p>{{'aboutPage.description' | translate}}</p>
         </header>
       </div>
       <!-- /.row -->
@@ -21,7 +20,7 @@
   <div class="container">
     <div class="row">
       <div class="col-md-8 col-md-offset-2">
-        <app-tab-component></app-tab-component>
+        <app-tab-component [tabContent]="tabContent"></app-tab-component>
         <!-- end tab-style-5 -->
       </div>
       <!-- end col-md-8 -->
@@ -30,9 +29,6 @@
   </div>
   <!-- end container -->
 </section>
-
-
-
 <!-- ========== ABOUT SECTION ========== -->
 <section class="content-section gray-bg">
   <div class="container">

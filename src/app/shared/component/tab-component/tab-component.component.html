@@ -1,35 +1,10 @@
 <md-tab-group fxFlex fxLayout="row" fxLayoutAlign="space-around center" class="flex-stretch">
-  <md-tab fxFlex>
+  <md-tab *ngFor="let tab of tabContent" fxFlex>
     <template md-tab-label>
-      <a><span class="icon ion-ios-home-outline"></span> History</a>
+      <a><span class="icon" [ngClass]="tab.icon"></span> {{tab.label | translate}}</a>
     </template>
     <div class="tab-content">
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
-        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    </div>
-  </md-tab>
-  <md-tab fxFlex>
-    <template md-tab-label>
-      <a><span class="icon ion-ios-body-outline"></span> Vision</a>
-    </template>
-    <div class="tab-content">
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
-        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    </div>
-  </md-tab>
-  <md-tab fxFlex>
-    <template md-tab-label>
-      <a><span class="icon ion-ios-email-outline"></span> Mission</a>
-    </template>
-    <div class="tab-content">
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
-        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <p>{{tab.content | translate}}</p>
     </div>
   </md-tab>
 </md-tab-group>
