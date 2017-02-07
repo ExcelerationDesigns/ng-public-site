@@ -9,6 +9,7 @@ $md-font-family: 'Questrial', 'Helvetica Neue', sans-serif;
 // Bring in the widget level themes to override components
 //
 @import '../app/layout/header/header.theme';
+@import '../app/shared/component/tab-component/_tab-component.component';
 
 @mixin global-material-modifications($theme) {
 
@@ -26,8 +27,10 @@ $md-font-family: 'Questrial', 'Helvetica Neue', sans-serif;
     line-height: inherit;
   }
 
+
   //
   // Call the mixins here
   //
   @include header-theme($theme);
+  @include tab-overrides($theme)
 }

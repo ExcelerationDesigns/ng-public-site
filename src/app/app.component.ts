@@ -64,8 +64,7 @@ export class AppComponent implements OnInit, OnDestroy, AfterContentInit {
 
   watchMediaQueryChanges() {
     this.mediaQueryWatcher = this.media$.subscribe((change: MediaChange) => {
-      this.isMobile = (change.mqAlias === 'xs') || (change.mqAlias === 'sm')
-                   || (change.mqAlias === 'gt-xs') || (change.mqAlias === 'gt-sm');
+      this.isMobile = (change.mqAlias === 'xs') || (change.mqAlias === 'sm');
     });
   }
 
