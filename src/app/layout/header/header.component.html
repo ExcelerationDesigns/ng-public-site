@@ -13,18 +13,10 @@
       </md-menu>
     </div>
     <div fxFlex="60" fxLayout="row" fxLayoutAlign="flex-start">
-      <a md-button fxFlex="0 1 auto" routerLink="/home" routerLinkActive="active">{{'homePage.title' | translate}}</a>
-      <div fxFlex="0 1 auto">
-        <a md-button [mdMenuTriggerFor]="serviceMenu">
-          {{'servicePage.title' | translate}}
-        </a>
-        <md-menu y-position="below" overlapTripper="true" #serviceMenu="mdMenu">
-          <button md-menu-item routerLink="/services/website-design"> {{'servicePage.customWebsites.fullTitle' | translate}} </button>
-          <button md-menu-item routerLink="/services/application-development"> {{'servicePage.appDev.fullTitle' | translate}} </button>
-          <button md-menu-item routerLink="/services/technical-consulting"> {{'servicePage.consulting.fullTitle' | translate}} </button>
-        </md-menu>
-      </div>
-      <a md-button fxFlex="0 1 auto" routerLink="/about" routerLinkActive="active">{{'aboutPage.title' | translate}}</a>
+      <button md-button fxFlex="0 1 auto" routerLink="/home" routerLinkActive="active">{{'homePage.title' | translate}}</button>
+      <button md-button fxFlex="0 1 auto" routerLink="/about" routerLinkActive="active">{{'aboutPage.title' | translate}}</button>
+      <button md-button fxFlex="0 1 auto" [mdMenuTriggerFor]="serviceMenu">{{'servicePage.title' | translate}}</button>
+      <button md-button fxFlex="0 1 auto" routerLink="/contact" routerLinkActive="active">{{'contactPage.title' | translate}}</button>
       <a *ngIf="authService.isLoggedIn" routerLink="/admin" md-button fxFlex="0 1 auto">{{'adminPage.shortTitle' | translate}}</a>
       <a *ngIf="authService.isLoggedIn" (click)="logout()" md-button fxFlex="0 1 auto">{{'loginPage.logout' | translate}}</a>
     </div>
@@ -35,3 +27,8 @@
     </div>
   </nav>
 </header>
+<md-menu y-position="below" overlapTripper="true" #serviceMenu="mdMenu">
+  <button md-menu-item routerLink="/services/website-design"> {{'servicePage.customWebsites.fullTitle' | translate}} </button>
+  <button md-menu-item routerLink="/services/application-development"> {{'servicePage.appDev.fullTitle' | translate}} </button>
+  <button md-menu-item routerLink="/services/technical-consulting"> {{'servicePage.consulting.fullTitle' | translate}} </button>
+</md-menu>
