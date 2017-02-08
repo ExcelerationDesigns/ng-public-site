@@ -8,6 +8,11 @@ import { TabContent } from './../../shared/component/tab-component/tab-component
 })
 export class AboutPageComponent implements OnInit {
   tabContent: TabContent[];
+  yearsInBusiness: number = this.getYearsInBusiness(1998);
+  countOne: number;
+  countTwo: number;
+  countThree: number;
+  countFour: number;
   constructor() { }
 
   ngOnInit() {
@@ -28,6 +33,10 @@ export class AboutPageComponent implements OnInit {
         label: 'aboutPage.mission'
       }
     ];
+  }
+
+  getYearsInBusiness(startYear: number): number {
+    return new Date().getFullYear() - startYear;
   }
 
 }

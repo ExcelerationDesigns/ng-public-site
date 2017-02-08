@@ -26,19 +26,19 @@ describe('ng-public-site App', () => {
       expect(linkList.get(0).getText()).toEqual('Home');
     });
 
-    it('should have a link to services page', () => {
-      const linkList = page.getNavLinkList();
-      expect(linkList.get(1).getText()).toEqual('Services');
-    });
-
     it('should have a link to about page', () => {
       const linkList = page.getNavLinkList();
-      expect(linkList.get(2).getText()).toEqual('About');
+      expect(linkList.get(1).getText()).toEqual('About');
     });
 
-    it('should have a link to admin page', () => {
+    it('should have a link to services page', () => {
       const linkList = page.getNavLinkList();
-      expect(linkList.get(3).getText()).toEqual('');
+      expect(linkList.get(2).getText()).toEqual('Services');
+    });
+
+    it('should have a link to contact page', () => {
+      const linkList = page.getNavLinkList();
+      expect(linkList.get(3).getText()).toEqual('Contact Us');
     });
   });
 
@@ -50,7 +50,7 @@ describe('ng-public-site App', () => {
     });
 
     it('should have a link to about page', () => {
-      page.getNavLinkList().get(2).click().then(() => {
+      page.getNavLinkList().get(1).click().then(() => {
         expect(page.getAboutPageComponent().getText()).toContain('Passionate Developers');
       });
     });

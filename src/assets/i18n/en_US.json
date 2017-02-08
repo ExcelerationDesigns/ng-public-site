@@ -9,7 +9,25 @@
         "vision": "Vision",
         "visionContent": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
         "mission": "Mission",
-        "missionContent": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        "missionContent": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "ediDescription": "We are a team of experienced graphic designers and developers whose goal is to deliver high quality products to our customers.  Unlike other shops, we have been in the technology business since 1998, and have the web transform from static sites, to fully responsive web applications powered by JavaScript frameworks.  Our belief is that through a great company culture, and phenomenal engineering practices we can great wonderful produts that we are proud of and that our customers love.",
+        "companyCulture": "Great Company Culture",
+        "enterpriseQuality": "Enterprise Quality",
+        "productsShipped": "Products Shipped",
+        "craftsmen": "Craftsmen",
+        "yearsInBusiness": "Years Of Experience",
+        "happyCustomers": "Happy Customers",
+        "ourHistory": {
+            "title": "Our History",
+            "rockinB": "Rockin B Website Design",
+            "rbStory": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "bigSky": "Big Sky Internet Design",
+            "bsidStory": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "aggieland": "Aggieland Website Design",
+            "awdStory": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "excelerationDesigns": "Exceleration Designs",
+            "ediStory": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        }
     },
     "adminPage": {
         "blogs": "Blog Articles",

@@ -8,7 +8,7 @@ $md-font-family: 'Questrial', 'Helvetica Neue', sans-serif;
 //
 // Bring in the widget level themes to override components
 //
-@import '../app/layout/header/header.theme';
+@import '../app/layout/header/_header.theme';
 @import '../app/shared/component/tab-component/_tab-component.component';
 
 @mixin global-material-modifications($theme) {
