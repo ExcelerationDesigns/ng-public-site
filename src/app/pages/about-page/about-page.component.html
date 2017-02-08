@@ -1,5 +1,5 @@
 <!-- ========== HEADER ========== -->
-<section class="parallax-section" data-parallax="scroll" data-image-src="./assets/images/demo-img-2.jpg" data-speed="0.5">
+<section class="parallax-section header-section">
   <section class="content-section black-grad">
     <div class="container">
       <div class="row text-center">
@@ -36,18 +36,14 @@
 
       <div class="col-md-6">
         <header class="section-title">
-          <h6 class="small-title">Who we are?</h6>
-          <h1 class="main-title">About Us.</h1>
+          <h6 class="small-title">{{'aboutPage.smallTitle' | translate}}</h6>
+          <h1 class="main-title">{{'appTitle' | translate}}</h1>
         </header>
         <!-- /.section-title -->
-        <p>We are young team of highly experienced developers! Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
-          do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-          ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <p>{{'aboutPage.ediDescription' | translate}}</p>
         <ul class="ul-style-3">
-          <li class="col-md-6"><i class="icon ion-ios-checkmark"></i> Built on Bootstrap</li>
-          <li class="col-md-6"><i class="icon ion-ios-checkmark"></i> Sass & CSS included</li>
-          <li class="col-md-6"><i class="icon ion-ios-checkmark"></i> Minified js & css provided</li>
-          <li class="col-md-6"><i class="icon ion-ios-checkmark"></i> Built using gulp</li>
+          <li class="col-md-6"><i class="icon ion-ios-checkmark"></i>{{'aboutPage.companyCulture' | translate}}</li>
+          <li class="col-md-6"><i class="icon ion-ios-checkmark"></i>{{'aboutPage.enterpriseQuality' | translate}}</li>
         </ul>
         <!-- /.ul-style-3 -->
       </div>
@@ -57,8 +53,8 @@
         <div class="col-md-6">
           <div class="counter-box-3">
             <span class="icon ion-ios-help-buoy"></span>
-            <span class="counter">2000</span>
-            <p>Websites Designed</p>
+            <span class="counter" appCounter [step]="30" [countTo]="450" [countFrom]="0" [duration]="3" (onCountChange)="countOne = $event">{{countOne}}</span>
+            <p>{{'aboutPage.productsShipped' | translate}}</p>
           </div>
           <!-- /.counter-box -->
         </div>
@@ -66,9 +62,9 @@
 
         <div class="col-md-6">
           <div class="counter-box-3">
-            <span class="icon ion-ios-paper"></span>
-            <span class="counter">70000</span>
-            <p>Line of Code</p>
+            <span class="icon ion-ios-people"></span>
+            <span class="counter" appCounter [step]="1000" [countTo]="5" [countFrom]="0" [duration]="3" (onCountChange)="countOneA = $event">{{countOneA}}</span>
+            <p>{{'aboutPage.craftsmen' | translate}}</p>
           </div>
           <!-- /.counter-box -->
         </div>
@@ -77,8 +73,8 @@
         <div class="col-md-6">
           <div class="counter-box-3">
             <span class="icon ion-ios-clipboard"></span>
-            <span class="counter">700</span>
-            <p>Files Committed</p>
+            <span class="counter" appCounter [step]="500" [countTo]="yearsInBusiness" [countFrom]="0" [duration]="5" (onCountChange)="countThree = $event">{{countThree}}</span>
+            <p>{{'aboutPage.yearsInBusiness' | translate}}</p>
           </div>
           <!-- /.counter-box -->
         </div>
@@ -87,8 +83,8 @@
         <div class="col-md-6">
           <div class="counter-box-3">
             <span class="icon ion-ios-happy"></span>
-            <span class="counter">1760</span>
-            <p>Smiling Customers</p>
+            <span class="counter" appCounter [step]="30" [countTo]="300" [countFrom]="0" [duration]="6" (onCountChange)="countFour = $event">{{countFour}}</span>
+            <p>{{'aboutPage.happyCustomers' | translate}}</p>
           </div>
           <!-- /.counter-box -->
         </div>
@@ -104,7 +100,7 @@
 <!-- /.content-section -->
 
 <!-- ========== HALF IMAGE SECTION ========== -->
-<section class="parallax-section" data-parallax="scroll" data-image-src="./assets/images/demo-img-3.jpg" data-speed="0.5">
+<section class="parallax-section compass-section">
   <div class="container-fluid">
     <div class="row">
       <div class="col-md-6">
@@ -113,8 +109,8 @@
       <!-- /.col-md-6 -->
       <div class="col-md-6 black-half pt80 pb80">
         <header class="section-title">
-          <h6 class="small-title">Who we are?</h6>
-          <h1 class="main-title">Our History.</h1>
+          <h6 class="small-title">{{'aboutPage.smallTitle'| translate}}</h6>
+          <h1 class="main-title">{{'aboutPage.ourHistory.title'| translate}}</h1>
         </header>
         <!-- /.section-title -->
 
@@ -125,9 +121,8 @@
             </div>
             <!-- / .tm-icon -->
             <div class="tm-detail">
-              <h5 class="mb10">Startup</h5>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                magna aliqua.</p>
+              <h5 class="mb10">{{'aboutPage.ourHistory.rockinB'| translate}}</h5>
+              <p>{{'aboutPage.ourHistory.rbStory'| translate}}</p>
             </div>
             <!-- / .tm-detail -->
           </div>
@@ -138,9 +133,8 @@
             </div>
             <!-- / .tm-icon -->
             <div class="tm-detail">
-              <h5 class="mb10">Seed Funding</h5>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                magna aliqua.</p>
+              <h5 class="mb10">{{'aboutPage.ourHistory.bigSky'| translate}}</h5>
+              <p>{{'aboutPage.ourHistory.bsidStory'| translate}}</p>
             </div>
             <!-- / .tm-detail -->
           </div>
@@ -151,9 +145,8 @@
             </div>
             <!-- / .tm-icon -->
             <div class="tm-detail">
-              <h5 class="mb10">Series A</h5>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                magna aliqua.</p>
+              <h5 class="mb10">{{'aboutPage.ourHistory.aggieland'| translate}}</h5>
+              <p>{{'aboutPage.ourHistory.awdStory'| translate}}</p>
             </div>
             <!-- / .tm-detail -->
           </div>
@@ -164,9 +157,8 @@
             </div>
             <!-- / .tm-icon -->
             <div class="tm-detail">
-              <h5 class="mb10">Success</h5>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                magna aliqua.</p>
+              <h5 class="mb10">{{'aboutPage.ourHistory.excelerationDesigns'| translate}}</h5>
+              <p>{{'aboutPage.ourHistory.ediStory'| translate}}</p>
             </div>
             <!-- / .tm-detail -->
           </div>
