@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { TranslateModule } from 'ng2-translate/ng2-translate';
+import { AgmCoreModule } from 'angular2-google-maps/core';
 
 import { SharedModule } from '../../shared/shared.module';
 
@@ -16,7 +17,8 @@ import { ContactPageComponent } from './contact-page.component';
     CommonModule,
     ContactPageRoutingModule,
     TranslateModule,
-    SharedModule
+    SharedModule,
+    AgmCoreModule
   ]
 })
 export class ContactPageModule { }
