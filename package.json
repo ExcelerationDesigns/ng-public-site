@@ -26,6 +26,7 @@
     "@angular/platform-browser": "2.4.6",
     "@angular/platform-browser-dynamic": "2.4.6",
     "@angular/router": "3.4.6",
+    "angular2-google-maps": "^0.17.0",
     "angularfire2": "2.0.0-beta.7",
     "angulartics2": "1.6.3",
     "bootstrap-sass": "^3.3.7",

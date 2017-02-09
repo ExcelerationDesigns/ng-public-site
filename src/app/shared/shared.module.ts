@@ -10,19 +10,22 @@ import { TranslateModule } from 'ng2-translate/ng2-translate';
 import { ParallaxDirective } from './directives/parallax/parallax.directive';
 import { CounterDirective } from './directives/counter/counter.directive';
 import { TabComponentComponent } from './component/tab-component/tab-component.component';
+import { SafeSanitizePipe } from './pipes/safe-sanitize/safe-sanitize.pipe';
 
 @NgModule({
   declarations: [
     ParallaxDirective,
     CounterDirective,
-    TabComponentComponent
+    TabComponentComponent,
+    SafeSanitizePipe
   ],
   exports: [
     CommonModule,
     FormsModule,
     ParallaxDirective,
     CounterDirective,
-    TabComponentComponent
+    TabComponentComponent,
+    SafeSanitizePipe
   ],
   imports: [
     CommonModule,

@@ -67,7 +67,7 @@
 <section class="content-section gray-bg">
   <div class="container">
     <div class="row">
-      <form class="col-md-8 col-md-offset-2" action="send-email-mailgun.php" method="post" id="form">
+      <form class="col-md-12" action="send-email-mailgun.php" method="post" id="form">
         <div class="form-group col-md-6">
           <label for="firstname">First Name</label>
           <input type="text" class="form-control" id="firstname" name="firstname" placeholder="First Name.." required="">
@@ -105,4 +105,6 @@
 </section>
 
 <!-- ========== MAP SECTION ========== -->
-<div id='fullWidthMap'></div>
+<sebm-google-map [zoomControl]="false" [disableDefaultUI]="false" [styles]="mapStyle"
+                 [mapDraggable]="false" [disableDoubleClickZoom]="false" [zoom]="11"
+                 [scrollwheel]="false" [latitude]="lat" [longitude]="lng"></sebm-google-map>

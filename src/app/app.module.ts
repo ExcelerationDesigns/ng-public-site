@@ -9,7 +9,7 @@ import { MaterialModule } from '@angular/material';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { TranslateModule, TranslateLoader, TranslateStaticLoader } from 'ng2-translate/ng2-translate';
-
+import { AgmCoreModule } from 'angular2-google-maps/core';
 import { AngularFireModule } from 'angularfire2';
 import { Angulartics2Module, Angulartics2GoogleAnalytics } from 'angulartics2';
 
@@ -65,6 +65,9 @@ export function createTranslateLoader(http: Http, pl: PlatformLocation) {
     SharedModule,
     LayoutModule,
     AngularFireModule.initializeApp(FireBaseConfig, FirebaseAuthConfig),
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyAK7VsZRJNcTTpOwGS1n69SywlGvvSVYig'
+    }),
     AppRoutingModule,
   ],
   providers: [
