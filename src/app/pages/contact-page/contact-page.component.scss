@@ -24,3 +24,22 @@
   height: 300px;
   width: 100%;
 }
+
+.parallax-section {
+  .content-section {
+    background-image: url('./assets/images/demo-img-4.jpg');
+  }
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+app-form-dialog {
+  width: 400px;
+  height: 600px;
+}
+
+iframe {
+  border: 0;
+}

@@ -40,7 +40,14 @@
     },
     "appTitle": "Exceleration Designs",
     "contactPage": {
-        "title": "Contact Us"
+        "title": "Contact Us",
+        "getInTouch": "Get in touch",
+        "mainDescription": "We love hearing from you whether you're just curious or an existing customer.  Our relationship with our clients is the most important part of our business.",
+        "actionTitle": "Say hi by clicking an option below!",
+        "sales": "Sales",
+        "salesDescription": "Come talk to our lovely sales department, we would be happy to talk about your next project and give a quote.",
+        "support": "Support",
+        "supportDescription": "Uh oh! Something not quite right?? Click here to alert the team so we can get your issue resolved right away!"
     },
     "footer": {
         "aboutUs": "About Us",
