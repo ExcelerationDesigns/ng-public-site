@@ -16,16 +16,16 @@
   },
   "private": true,
   "dependencies": {
-    "@angular/common": "2.4.6",
-    "@angular/compiler": "2.4.6",
-    "@angular/core": "2.4.6",
+    "@angular/common": "2.4.8",
+    "@angular/compiler": "2.4.8",
+    "@angular/core": "2.4.8",
     "@angular/flex-layout": "^2.0.0-beta.4",
-    "@angular/forms": "2.4.6",
-    "@angular/http": "2.4.6",
+    "@angular/forms": "2.4.8",
+    "@angular/http": "2.4.8",
     "@angular/material": "git+https://github.com/angular/material2-builds.git",
-    "@angular/platform-browser": "2.4.6",
-    "@angular/platform-browser-dynamic": "2.4.6",
-    "@angular/router": "3.4.6",
+    "@angular/platform-browser": "2.4.8",
+    "@angular/platform-browser-dynamic": "2.4.8",
+    "@angular/router": "3.4.8",
     "angular2-google-maps": "^0.17.0",
     "angularfire2": "2.0.0-beta.7",
     "angulartics2": "1.6.3",
@@ -40,8 +40,8 @@
     "zone.js": "0.7.2"
   },
   "devDependencies": {
-    "@angular/cli": "^1.0.0-beta.30",
-    "@angular/compiler-cli": "2.4.6",
+    "@angular/cli": "^1.0.0-rc.0",
+    "@angular/compiler-cli": "2.4.8",
     "@types/chance": "^0.7.31",
     "@types/jasmine": "2.5.38",
     "@types/node": "^6.0.42",
@@ -54,11 +54,11 @@
     "karma-chrome-launcher": "^2.0.0",
     "karma-cli": "^1.0.1",
     "karma-jasmine": "^1.0.2",
-    "karma-remap-istanbul": "^0.2.1",
+    "karma-coverage-istanbul-reporter": "^0.2.3",
     "protractor": "5.0.0",
     "ts-node": "1.2.1",
     "tslint": "~4.3.0",
     "tslint-eslint-rules": "^3.2.3",
-    "typescript": "~2.0.3"
+    "typescript": "~2.2.1"
   }
 }
