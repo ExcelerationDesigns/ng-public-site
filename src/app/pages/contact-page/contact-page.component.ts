@@ -6,8 +6,8 @@ import { Component, OnInit, AfterViewInit, ElementRef } from '@angular/core';
   templateUrl: './contact-page.component.html',
 })
 export class ContactPageComponent implements OnInit, AfterViewInit {
+  showForm: boolean = false;
 
-  contactUrl: string = 'https://bigsky.formstack.com/forms/edi_contact_form';
   lat: number = 39.7392;
   lng: number = -104.9903;
   mapStyle = [{ elementType: 'geometry', stylers: [{ color: '#242f3e' }] },
