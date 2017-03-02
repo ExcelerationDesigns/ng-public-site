@@ -69,23 +69,23 @@ export interface ParallaxConfig {
 })
 
 export class ParallaxDirective implements OnInit {
-  name: string = 'parallaxDirective';
+  name = 'parallaxDirective';
 
   @Input() config: ParallaxConfig;
   // the following @Inputs are all part of the config object, which for
   // brevity's sake, you can do a bunch of operations in bulk by passing
   // in the config object; caveat for this is that angular 2 won't permit
   // more than 9 keys being passed in an object via the template
-  @Input() cssKey: string = 'backgroundPosition';
-  @Input() cssProperty: string = 'backgroundPositionY';
+  @Input() cssKey = 'backgroundPosition';
+  @Input() cssProperty = 'backgroundPositionY';
   @Input() axis: 'X' | 'Y' = 'Y';
   @Input() ratio: number = -.7;
-  @Input() initialValue: number = 0;
+  @Input() initialValue = 0;
   @Input() canMove: any = true;
   @Input() scrollerId: string;
   @Input() maxValue: number;
   @Input() minValue: number;
-  @Input() cssUnit: string = 'px';
+  @Input() cssUnit = 'px';
   @Input() cb;
   @Input() cb_context: any = null;
   @Input() cb_args: any[] = [];
@@ -95,7 +95,7 @@ export class ParallaxDirective implements OnInit {
   parallaxStyles: {} = {};
 
   private cssValue: string;
-  private isSpecialVal: boolean = false;
+  private isSpecialVal = false;
 
   private hostElement: HTMLElement;
 

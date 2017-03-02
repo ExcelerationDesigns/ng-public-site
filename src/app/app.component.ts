@@ -1,10 +1,10 @@
 import 'rxjs/add/operator/map';
 
-import { Component, Inject, OnInit, OnDestroy, AfterContentInit } from '@angular/core';
+import { Component, OnInit, OnDestroy, AfterContentInit } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
 import { Title } from '@angular/platform-browser';
 import { MediaChange } from '@angular/flex-layout';
-import { ObservableMediaService } from '@angular/flex-layout/media-query/observable-media-service';
+import { ObservableMedia } from '@angular/flex-layout';
 import { Angulartics2GoogleAnalytics } from 'angulartics2';
 import { Subscription } from 'rxjs/Subscription';
 
@@ -16,7 +16,7 @@ import { TranslateService } from 'ng2-translate/ng2-translate';
   templateUrl: './app.component.html'
 })
 export class AppComponent implements OnInit, OnDestroy, AfterContentInit {
-  isMobile: boolean = false;
+  isMobile = false;
   private mediaQueryWatcher: Subscription;
   private routeWatcher: Subscription;
 
@@ -24,7 +24,7 @@ export class AppComponent implements OnInit, OnDestroy, AfterContentInit {
               private translate: TranslateService,
               private angulartics2GoogleAnalytics: Angulartics2GoogleAnalytics,
               private router: Router,
-              @Inject(ObservableMediaService) private media$) {
+              private media$: ObservableMedia) {
     // this language will be used as a fallback when a translation isn't found in the current language
     translate.setDefaultLang('en_US');
 

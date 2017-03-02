@@ -6,10 +6,10 @@ import { Component, OnInit, AfterViewInit, ElementRef } from '@angular/core';
   templateUrl: './contact-page.component.html',
 })
 export class ContactPageComponent implements OnInit, AfterViewInit {
-  showForm: boolean = false;
+  showForm = false;
 
-  lat: number = 39.7392;
-  lng: number = -104.9903;
+  lat = 39.7392;
+  lng = -104.9903;
   mapStyle = [{ elementType: 'geometry', stylers: [{ color: '#242f3e' }] },
   { elementType: 'labels.text.stroke', stylers: [{ color: '#242f3e' }] },
   { elementType: 'labels.text.fill', stylers: [{ color: '#746855' }] },

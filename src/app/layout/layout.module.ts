@@ -35,7 +35,7 @@ import { LawyerDialogComponent } from './footer/lawyer-dialog/lawyer-dialog.comp
   ],
   imports: [
     CommonModule,
-    MaterialModule.forRoot(),
+    MaterialModule,
     FlexLayoutModule.forRoot(),
     CoreModule,
     SharedModule,

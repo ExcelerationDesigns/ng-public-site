@@ -6,11 +6,11 @@ export class ConstService {
   //
   // Internal Routes
   //
-  public readonly loginRoute: string = `/login`;
+  public readonly loginRoute = `/login`;
 
   //
   // API Routes
   //
 
-  public readonly addressRoute: string = `/address/`;
+  public readonly addressRoute = `/address/`;
 }

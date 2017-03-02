@@ -8,10 +8,10 @@ import { AngularFire, AuthProviders, AuthMethods, FirebaseAuthState } from 'angu
 export class AuthService {
 
   firebaseAuthState: FirebaseAuthState = null;
-  isLoggedIn: boolean = false;
+  isLoggedIn = false;
 
   // store the URL so we can redirect after logging in
-  redirectUrl: string = '';
+  redirectUrl = '';
 
   constructor(private af: AngularFire,
               private translate: TranslateService,

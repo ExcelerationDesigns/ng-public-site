@@ -1,7 +1,7 @@
 @import '../../../../styles/variables';
 
 md-tab-group {
-    .md-tab-label  {
+    .mat-tab-label  {
         padding: 10px 25px;
         color: darken($light-gray-color, 30%);
         font-family: $st-body-font;
@@ -11,9 +11,9 @@ md-tab-group {
             border-color: transparent;
         }
     }
-    .md-tab-label-active >
-    .md-tab-label-active > a:focus,
-    .md-tab-label-active > a:hover {
+    .mat-tab-label-active >
+    .mat-tab-label-active > a:focus,
+    .mat-tab-label-active > a:hover {
         color: $black-color;
         background-color: transparent;
         border: 1px solid $light-black-color;
