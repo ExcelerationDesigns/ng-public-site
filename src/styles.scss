@@ -16,13 +16,13 @@ $md-font-family: 'Questrial', 'Helvetica Neue', sans-serif;
 @import './styles/material-theme';
 
 // Include material core styles.
-@include md-core();
+@include mat-core();
 
 // Define the light theme.
-$primary: md-palette($md-red);
-$accent:  md-palette($md-grey, A200, A100, A400);
+$primary: mat-palette($mat-red);
+$accent:  mat-palette($mat-grey, A200, A100, A400);
 
-$theme: md-light-theme($primary, $accent);
+$theme: mat-light-theme($primary, $accent);
 
 @include angular-material-theme($theme);
 @include global-material-modifications($theme);

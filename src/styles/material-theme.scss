@@ -13,18 +13,21 @@ $md-font-family: 'Questrial', 'Helvetica Neue', sans-serif;
 
 @mixin global-material-modifications($theme) {
 
-  .md-menu-content {
+  .mat-menu-content {
     padding-top: 0!important;
     padding-bottom: 0!important;
   }
 
-  .md-dialog-container {
+  .mat-dialog-container {
     background-color: white;
   }
 
+  .mat-tab-links {
+    display: flex;
+  }
 
-  [md-menu-item] {
-    line-height: inherit;
+  .mat-menu-item {
+    line-height: inherit!important;
   }
 
 

@@ -59,7 +59,7 @@ export function createTranslateLoader(http: Http, pl: PlatformLocation) {
       provide: TranslateLoader,
       useFactory: (createTranslateLoader)
     }),
-    MaterialModule.forRoot(),
+    MaterialModule,
     FlexLayoutModule.forRoot(),
     CoreModule,
     SharedModule,

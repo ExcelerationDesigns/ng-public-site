@@ -17,6 +17,10 @@ export class Ng2PublicSitePage {
     return element.all(by.css('app-root app-header nav button'));
   }
 
+  getHomeLinkText() {
+    return element(by.css('.home')).getText();
+  }
+
   getLangListArray() {
     return element.all(by.css('app-root app-header nav .lang-buttons [md-button]'));
   }
